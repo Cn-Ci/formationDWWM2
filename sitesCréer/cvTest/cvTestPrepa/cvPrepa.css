@@ -1,0 +1,201 @@
+                * {
+                    margin: 0;
+                }
+                
+                body {
+                    font-family: 'Josefin Sans', sans-serif;
+                    max-width: 100%;
+                    overflow-x: hidden;
+                    max-height: 100%;
+                    width:100%;
+                    margin:0!important;
+                }
+                
+                img {
+                    width: 150px;
+                    height: 250px;
+                }
+                
+                .img_cache {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 200px;
+                    float: left;
+                    z-index: -1;
+                    height: 220px;
+                }
+                
+                header {
+                    width: 100%;
+                    height: 200px;
+                    background-color: rgb(199, 171, 149);
+                    transition-property: transform;
+                    transition-duration: 10s;
+                    transition-timing-function: ease;
+                    z-index: 2;
+                }
+                
+                header {
+                    transform: translateX(200px);
+                    /* On déplace l'objet */
+                }
+                
+                .entete {
+                    display: flex;
+                }
+                
+                header,
+                a {
+                    color: rgb(104, 94, 94);
+                    text-align: center;
+                    padding-top: 20px;
+                    font-size: 20px
+                }
+                
+                head h1 {
+                    font-style: 300;
+                    font-size: 50px;
+                }
+                
+                .fix h3 {
+                    font-style: 100;
+                    font-size: 2rem;
+                }
+                
+                .fix p {
+                    padding-top: 30px;
+                    font-style: 300;
+                    font-size: 1,7rem;
+                }
+                
+                .fix p a {
+                    text-decoration: none;
+                    color: black;
+                }
+                
+                .fix p a:hover {
+                    color: rgb( 104, 94, 94);
+                }
+                
+                @media screen and (min-width: 768px) {
+                .fix{
+                    position: absolute;
+                    top: 20px;
+                    text-align: center;
+                    width:100%;
+                    z-index: 10!important;
+                }
+                .droite {
+                    float: right;
+                    text-align: right;
+                    width: 60%;
+                }
+            }
+                main {
+                    font-size: 18px;
+                    padding-left: 20px;
+                    padding: 10px;
+                    height: 600px;
+                }
+                
+                main p {
+                    color: grey;
+                    padding-left: 70px
+                }
+                
+                main h4 {
+                    padding: 10px;
+                    color: rgb(204, 150, 114)
+                }
+                
+                main h5 {
+                    padding: 4px;
+                    padding-left: 50px
+                }
+                
+                main h3 {
+                    color: rgb(207, 155, 112)
+                }
+                
+                .gd {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+                
+                .gauche {
+                    float: left;
+                    text-align: left;
+                    width: 40%;
+                }
+                
+              
+                
+                ul {
+                    color: black;
+                    list-style-type: none;
+                    padding-top: 30px;
+                    padding: 10px;
+                }
+                
+                .form h3 {
+                    padding-top: 80px;
+                }
+                
+                .form li {
+                    font-weight: bold;
+                    padding-right: 10px
+                }
+                
+                .form p {
+                    color: grey;
+                    padding-bottom: 15px;
+                    padding-right: 50px
+                }
+                
+                .qual {
+                    text-align: right;
+                    padding-right: 1px;
+                    padding-top: 100px;
+                }
+                
+                .qual p {
+                    padding-top: 15px
+                }
+                
+                footer {
+                    background: rgb(197, 155, 123);
+                    height: 10%;
+                    width: 100%;
+                    padding-top: 30px;
+                    text-align: center;
+                    border-radius: 50%;
+                    max-width: 100%;
+                    overflow-x: hidden;
+                    max-height: 50%;
+                }
+                
+                footer {
+                    animation-duration: 10s;
+                    animation-name: slidein;
+                }
+                
+                @keyframes slidein {
+                    from {
+                        margin-left: 100%;
+                        width: 300%;
+                    }
+                    to {
+                        margin-left: 0%;
+                        width: 100%;
+                    }
+                }
+                
+                .sign {
+                    text-align: center;
+                    color: black;
+                    font-weight: bold;
+                    padding-top: 50px;
+                    margin-bottom: 50px
+                }

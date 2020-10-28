@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>La base de la programmation</title>
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+    <!-- navbar -->
+
+    <div id="conteneur-menu2">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="nav">
+                <a class="navbar-brand" href="index.html">Le Langage C</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Expli1.html">La base du langage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Expli2.html">Présentation du langage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Expli3.html">La pratique du langage</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container">
+
+
+        <!-- Paragraphe -->
+        <div class="row">
+            <div class="col-12 bg-white rounded text-center mt-5">
+                <p class="text-center">
+                    Le C est un langage compilé. Cela signifie qu'un programme C est décrit par un fichier texte, appelé fichier source. </br> Ce fichier n'étant évidemment pas exécutable par le microprocesseur, il faut le traduire en langage machine.
+                    Cette opération est effectuée par un programme appelé compilateur. </br>
+                    </br>
+                    <div class="c1">
+                        <img src='Image/imageC1x.png' class='img-fluid'>
+                    </div>
+                    </br>La compilation se décompose en 4 phases successives : </br>
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class='row text-center mt-3 mb-3 text-white'>
+
+            <!-- 1e point -->
+            <div class="col-6 col-lg-3">
+                <div class="colone1 p-4">
+                    <li>
+                        <strong>Le traitement par le préprocesseur :</strong></br>
+                        </br>Le fichier source est analysé par le préprocesseur qui effectue des transformations purement textuelles (remplacement de chaînes de caractères, inclusion d'autres fichiers source...).
+                        </br>
+                        </br>
+                    </li>
+                </div>
+            </div>
+
+            <!-- 2e point -->
+            <div class="col-6 col-lg-3">
+                <div class="colone2 p-4">
+                    <li>
+                        <strong>La compilation :</strong> </br>
+                        </br>La compilation proprement dite traduit le fichier généré par le préprocesseur en assembleur, c'est-à-dire en une suite d'instructions du microprocesseur qui utilisent des mnémoniques rendant la lecture possible. </br>
+                        </br>
+                    </li>
+                </div>
+            </div>
+
+            <!-- 3e point -->
+            <div class="col-6 col-lg-3">
+                <div class="colone3 p-4">
+                    <li>
+                        <strong>L'assemblage :</strong></br>
+                        </br>Cette opération transforme le code assembleur en un fichier binaire, c'est-à-dire en instructions directement compréhensibles par le processeur. Généralement, la compilation et l'assemblage se font dans la foulée, sauf si l'on
+                        spécifie explicitement que l'on veut le code assembleur. Le fichier produit par l'assemblage est appelé fichier objet. </br>
+                        </br>
+                    </li>
+                </div>
+            </div>
+
+            <!-- 4e point -->
+            <div class="col-6 col-lg-3">
+                <div class="colone4 p-4">
+                    <li>
+                        <strong>L'édition de liens :</strong></br>
+                        </br>Un programme est souvent séparé en plusieurs fichiers source, pour des raisons de clarté mais aussi parce qu'il fait généralement appel à des librairies de fonctions standard déjà écrites. Une fois chaque code source assemblé,
+                        il faut donc lier entre eux les différents fichiers objets. L'édition de liens produit alors un fichier dit exécutable. Les différents types de fichiers utilisés lors de la compilation sont distingués par leur suffixe.</br>
+                        </br>
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paragraphe -->
+        <div class="row">
+            <div class="col-12 bg-white rounded text-center mt-3 p-0">
+                <p>
+                    Les fichiers source sont suffixés par .c,
+                    </br>
+                    les fichiers prétraités par le préprocesseur par .i,
+                    </br>
+                    les fichiers assembleur par .s,
+                    </br>
+                    et les fichiers objet par .o.
+                    </br>
+                    Les fichiers objets correspondant aux librairies pré-compilées ont pour suffixe .a.
+                    </br>
+                    </br>
+                </p>
+                <div class="begin">
+                    <div class="col-12 text-white text-center pt-3 ">
+                        Pour commmencer à programmer, il nous faut</br>
+                        </br>
+                        un éditeur de texte </br>
+                        un compilateur </br>
+                        un débogueur</br>
+                        </br>
+                    </div>
+                </div>
+                <p>
+                    <div class="container text-center p-1 mt-1">
+                        Il existe deux possibilités :
+                        </br>
+                        </br>
+                    </div>
+
+                    <!-- colonnes possibilités -->
+                    <div class="row ">
+                        <div class="col-12 col-lg-6 ">
+                            <div class="bord1">
+                                - Soit on recupère ces trois programmes séparément</br>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+                            <div class="bord2">
+                                - Soit on utilise un programme 3 en 1, qu'on appele IDE,
+                                </br>
+                                <i>Environnement de développement</i>.
+                            </div>
+                        </div>
+                        <div class="imgcodeB">
+                            <img src="Image/codeB.png" class="img-fluid m-3" />
+                        </div>
+
+                    </div>
+                    <!-- divContainer -->
+            </div>
+
+
+            </br>
+            </br>
+            <div class="text-center m-5">
+                <h4>Le minimum de code en langage C</br>
+                </h4>
+                <div class="LC1">
+                    <img src="Image/LC1.png" class="img-fluid m-3" />
+                </div>
+
+                <div class="LC2">
+                    <img src="Image/LC2.png" class="img-fluid m-3" />
+                </div>
+                <p>
+                    Attention ! La console ne lit pas les accents ! </br>
+                    </br>
+                    Voici les principaux types de variables existant en langage C :
+                </p>
+
+
+                <!-- tableau type de variable -->
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Nom du type</th>
+                            <th scope="col">Minimum</th>
+                            <th scope="col">Maximum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>signed char</td>
+                            <td>-127</td>
+                            <td>127</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>int</td>
+                            <td>-32 767</td>
+                            <td>32 767</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>long</td>
+                            <td>- 2 147 483 647</td>
+                            <td>2 147 483 647</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>float</td>
+                            <td>- 1 x 1037</td>
+                            <td>1 x 1037</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>double</td>
+                            <td>- 1 x 1037</td>
+                            <td>1 x 1037</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>unsigned char</td>
+                            <td>0</td>
+                            <td>255</td>
+                        </tr>
+                        <th scope="row">7</th>
+                        <td>unsigned int</td>
+                        <td>0</td>
+                        <td>65 535</td>
+                        </tr>
+                        <th scope="row">9</th>
+                        <td>unsigned long</td>
+                        <td>0</td>
+                        <td>4 294 967 295</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <div class="LC4">
+                    <img src="image/LC4.png" class="img-fluid m-3" />
+                </div>
+                <p>
+                    Ici la variable se nomme age et a une valeur initialisé à 0. </br>
+                    Nous demandons à l'utilisateur son age grâce a "scanf", </br>
+                    et "%d" permet de recupérer la valeur ecrite par l'utilisateur.
+                </p>
+                <div class="LC5">
+                    <img src="image/LC5.png" class="img-fluid m-3" />
+                </div>
+                <p>
+                    Chaque variable est stockée à une adresse précise en mémoire.</br>
+                    Les pointeurs sont semblables aux variables, à ceci près qu'au lieu de stocker un nombre ils stockent l'adresse à laquelle se trouve une variable en mémoire.</br>
+                    Si on place un symbole & devant un nom de variable, on obtient son adresse au lieu de sa valeur.</br>
+                    Si on place un symbole * devant un nom de pointeur, on obtient la valeur de la variable stockée à l'adresse indiquée par le pointeur.
+                </p>
+                <div class="LC6">
+                    <img src="image/LC6.png" class="img-fluid m-3" />
+                </div>
+                <p>
+                    Les tableaux sont des ensembles de variables du même type stockées côte à côte en mémoire.</br>
+                    La taille d'un tableau doit être déterminée avant la compilation, elle ne peut pas dépendre d'une variable.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+<footer>
+
+    <div class="container rounded bg-secondary text-white text-center mt-5">
+        <h5>Mots clés a retenir </h5>
+        </br>
+        <ul class="text-left">
+            <li><strong>Code source :</strong> C'est le code de votre programme écrit dans un langage de haut niveau. C'est donc vous qui écrivez le code source, qui sera ensuite traduit en binaire.</li>
+            </br>
+            <li><strong>Compilateur :</strong> C'est un programme qui permet de traduire le langage C en binaire. il existe un compilateur différent pour chaque langage de haut niveau.</li>
+            </br>
+            <li><strong>Compilation :</strong> C'est la traduction du compilateur.</li>
+            </br>
+            <li><strong>L'éxécutable :</strong> C'est le programme binaire créé par le compilateur, d'où l'extension .exe .</li>
+            </br>
+            <li><strong>Debogueur :</strong> C'est un programme qui aide a traquer les erreurs.</li>
+            </br>
+            <li><strong>Directives de préprocesseur :</strong> Ce sont des lignes spéciales que l'on ne voit qu'en haut des fichiers source. Ces lignes sont facilement reconnaissables car elles commencent par un dièse#. Ce sont des lignes qui seront lues
+                par un programme appelé préprocesseur. </li>
+            </br>
+            <li><strong>Préprocesseur :</strong> C'est un programme qui se lance au début de la compilation.</li>
+            </br>
+        </ul>
+    </div>
+
+    <div class="bas">
+        <div class="text-center p-5 mt-5 text-white">
+            &copy Cindy
+        </div>
+    </div>
+</footer>
+
+</html>

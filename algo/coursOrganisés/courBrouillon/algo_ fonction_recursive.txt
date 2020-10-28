@@ -1,0 +1,120 @@
+﻿exo 5 fonction recursive
+
+def recursivite(n):
+   Si nb > 2:
+        retourner n * recursivite(n - 1)
+    retourner n
+	
+CORRECTION 
+
+	
+
+exo 6
+
+algo 
+si k = 0 ou 1 alors 
+	retourner k 
+sinon retourner (k-1) + k-2)
+
+FIBONACCI 
+
+Algo MontantTTC
+fonction fibonacci (n :entier) :entier
+
+debut	
+	Si (n = 0, alors retourner 0; finSi
+	si (n=1) alors retourner 1; finSi
+	retourner fibonacci (n-1) + fibonnaci (n-2);
+fin 
+
+variable n: entier; 
+debut 
+	lire(n);
+	ecrire ("Resultat:", fibonacci(n));
+fin 
+
+_____________________________________________________________________
+ 
+exo 1
+
+fonction nbCaracteres 
+(a: string, b : caractere) : entier
+
+debut
+	cpt:= 0 
+	pour a:= 1 à length(a) faire
+		si (a(i)=b) alors cpt := cpt+1; 
+		finsi
+	finpour
+	retourner cpt;
+fin
+
+variable 
+mot : string; lettre : caractere; cpt : entier
+
+debut
+	lire (mot, lettre);
+	cpt := nbCaracteres(mot, lettre);
+	ecrire ("Pour la phrase:"& mot&", il existe" &cpt&lettre);
+fin
+
+_____________________________________________________________________
+exo 2 
+
+procedure ordre
+
+
+debut
+	pour a:= 1 à lenght(a) faire
+		si (a< a+1) alors permuter (a,a+1)
+___________________________________________________________________
+
+exo 3 
+
+fonction nbcaractere
+(a: string) : entier
+
+debut
+cpt := 0 
+	pour a:=1 à lenght(a) faire 	
+		pour b:= 1 à lenght(b) faire 
+			si (b(i)=a) alors cpt := cpt+1;
+			i++;
+			FinSi 
+		finpour
+		retourner cpt;
+	finpour
+fin 
+		
+variable 
+mot :string, lettre : caractere; cpt : entier;
+
+debut 
+	lire(mot, lettre)
+	cpt:= nbcaractere(a) (mot, lettre)
+	ecrire ("Pour la phrase:"&mot&", il existe "&cpt&lettre);
+fin
+	
+
+___________________________________________________________________
+
+Exo 
+chaine de caract c1
+
+bonjour le groupe, il fait beau ! length(C1)
+
+chaine rechercher : C2 ou
+
+Pour 
+c1 (i) = c2 (1)
+c1 (i+1) = c2 (2)
+c2 (i +2)= c2 (3)
+
+
+
+
+
+
+
+
+

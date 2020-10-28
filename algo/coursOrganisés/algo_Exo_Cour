@@ -1,0 +1,210 @@
+﻿Exo 1 : Ecrire un algorithme permettant d'afficher la table de
+multiplication (de 1 à 10) d'un nb saisi par l'utilisateur
+    algo_multiplication
+    variable n, i : entier;
+    ecrire ("n");
+    lire(n);
+    Pour (i := 1; i <= 10; i++) faire
+        ecrire (n,"*",i"=",n * i");
+    finPour
+    fin
+
+_________________________________________________________________
+Exo 3 : Ecrire un algorithme qui permet de calculer le factoriel 
+d'un nb
+    algo_factorielle
+    variable n, F, i : entier;
+    ecrire ("n");
+    Pour (i := 1 ; i <= n ; i++) faire
+        F := F * i;
+        ecrire (F);
+    finPour
+    fin
+
+_________________________________________________________________
+Exo 4 : Ecrire un algorithme permettant d'afficher toutes les
+tables de multiplication de 1 à 10
+    algo_multiplication
+    variable n, j, i : entier
+    Pour (j := 1; j <= 10; j++) faire 
+        Pour (i := 1; i <= 10; i++) faire
+        ecrire (j,"=",j"*",i);
+        finPour
+    finPour
+    fin
+
+_________________________________________________________________
+Exo 5 : Ecrire un algorithme ou il doit etre ecrit 
+9999999999 888888888 77777777 ... 11 0
+    algo_chiffre
+    variable i, j : entier;
+    Pour (i := 0 ; i <= 10 ; i++) faire
+        Pour (j := 0 ; j <= 10-i; j++) faire
+            ecrire (10-i);
+        finPour
+    finPour
+    fin
+
+_________________________________________________________________
+Exo 6 : Ecrire un algorithme qui après avoir demandé un numero de 
+jour, de mois et d'année a l'utilisateur, renvoie s'il s'agit ou 
+non d'une date valide. année bis : / 4 et non par 100 ou / 400
+    algo_jour
+    var j, m, a
+debut 
+    ecrire ("entrez numero jour (1-31)," j)
+    ecrire ("entrez numero mois (1-12)," m)
+    ecrire ("entrez numero annee (XXXX)," a)
+        Si a%4:=0 et ((a%100>0) ou (a%400=0)) alors
+            ecrire ("l'année est bis")
+            sinon ecrire ("l'année n'est pas bis")
+                Si j>=30 et (m:=4 ; m:=6 ; m:=9 ; m:=11)
+                    alors ecrire ("date non valide")
+                    sinon ecrire ("date valide")
+                        Si (j>31 ou j<0) et (m>12 ou m<0)
+                        alors ecrire ("date non valide")
+                        finSi
+                finSi
+        finSi
+fin
+                    OU 
+debut
+    lire (j,m,a); 
+    est bisextile = (a%400=0 ou (a%4=0 et a%100!=0)     
+        Si (j>31 ou m>12) ou
+            m= 2 et ((est bisextile et j>29) ou (!est pas bisextile et j>28)
+        ou (m=4 ou m=6 ou m=9 ou m=11) et j>30);
+    alors ecrire ("date NV");
+    sinon ecrire ("date V");
+        finSi
+    fin
+
+_________________________________________________________________
+Exo 7 : Ecrire un algorithme qui permer de saisir une serie de nb 
+entiers positifs puis qui propose indéfinement à l'utilisateur, par 
+l'intermédiaire d'une sorte de menu à choix multiple, d'afficher la
+valeur min, max, la somme, ou la moyenne des nb entrés ou encore 
+de quitter le programme.
+Algo_menu 
+    algo serie de nb val min, val max, la somme, la moyenne ou quitter
+    var n, max, min, somme, moyenne, opération (op chaine de caracteres) entier; 
+    debut 
+        somme:=0; max:=0; i:=1
+            repeter 
+                ecrire ("saisissez un nombre:");
+                lire(n);
+                somme:=somme + n;
+                Si (n>max) alors max:=n;
+                    Si (i=1 ou n<min) alors min:= n;
+                        moyenne:=somme/i;
+                        i++;
+            jusqu'a (n=0);
+                                        %ou somme:= somme /i-1%
+        ecrire ("choississez une opération:")
+        ecrire ("s: pour somme")
+        ecrire ("m: pour moyenne")
+        ecrire ("max : pour maximum")
+        ecrire ("min : pour minimum")
+        lire (op);
+            suivant op faire;
+            "s" : ecrire (somme);
+            "m" : ecrire (moyenne);
+            "max" : ecrire (max);
+            "min" : ecrire (min);
+            sinon ecrire (au revoir);
+            FinSuivant
+    Fin
+
+_________________________________________________________________
+Exo 8 : 
+Ecrire un algorithme permettant de saisir un tableau de notes (3)
+pour deux étudiants, d'afficher le tableau et d'afficher la
+moyenne de chaque étudiant
+algo etudiants
+variable tab(1:n,1:m) : réels; i, j, moyenne, somme, note, n, m : entiers
+debut
+	pour i:=1 à n
+		ecrire ("l'étudiant",i, "a les notes suivantes :")
+		somme := 0
+			pour j:=1 à m 
+				ecrire ("saisir note", j ," pour l'élève", i, ":");
+    			lire (tab(i, j));
+				ecrire ("note ", j, " :", tab(i,j));
+				somme := somme + tab(i,j);
+			finPour
+					Moyenne := somme/j;
+					écrire ("moyenne de l'élève",i,"est de", moyenne);
+	finPour
+fin
+
+_________________________________________________________________
+Exo 9 :
+Ecrire un algorithme qui permet de saisir une chaine de 20 caractères
+maximum et une 2e chaine, puis affiche le nb de fois que la 2e chaine
+apparait dans la chaine initiale
+algo caractère
+fonction apparition(a: chaine de caractère, b:caractère):entier
+    variable 	i, j: entier	
+debut
+	j:=0
+	pour i=1, i<= lenght(a), i++
+	si b := a(i) alors
+		j:= j+1
+	fin si
+	retourner j
+fin
+
+variable chaine(1,20): string; y : caractere
+debut
+	lire (chaine(1,20))
+	lire(y)
+	resultat := apparition(chaine(1,20), y)
+	ecrire ("le caractère " & y & " est affiché ", & résultat &, " fois")					
+fin
+
+_________________________________________________________________
+Exo 10 : 
+Ecrice un algorithme permettant de chercher le nb de voyelles dans 
+un mot. utiliser les ensembles
+debut	    
+    type 	voyelles = ensemble de caractères		
+variable mot(1,n) : tableau de chaine de caractères
+		voyelles : lettres; cpt : entiers; i : entiers
+
+debut
+	voyelles = ['a','e','i','o','u','y','A','E','I','O','U','Y'];				
+	cpt := 0
+	    pour i:=1 jusqu'à length(mot) faire
+	        si voyelles IN mot(i) faire;
+		    cpt++;
+		    fin si
+	    fin pour
+	ecrire ("Il y a ", cpt, "voyelles dans le mot saisi.")
+fin
+_________________________________________________________________
+Exo 11 : 
+On souhaite construire une structure "etatCivil" permettant d'enregister
+le nom d'une personne, la ville ou elle réside et son année de naissance.
+Construire cette structure ainsi qu'un tableau permettant de stocker
+10 structures de ce type
+algo etatCivil				
+Type 	etatCivil = enregistrement
+				nom: string;
+				anneeNaissance : entiers;
+				ville : string;
+		fin_enregistrement;
+		
+
+variable personne(1,10) : tab de etatCivil; //array of 
+		  i : entiers		  
+debut
+	pour i=1 jusqu'à 10 faire
+		ecrire ("saisir votre nom");
+		lire personne(i.nom);
+		ecrire ("saisir votre année de naissance");
+		lire personne (i.anneeNaissance);
+		ecrire ("saisir votre ville");
+		lire personne (i.ville);
+		ecrire (personne(i).nom, personne(i).anneeNaissance, personne(i).ville);
+	finPour
+fin

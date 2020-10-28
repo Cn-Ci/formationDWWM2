@@ -1,0 +1,51 @@
+oral 
+
+J'ai choisi de vous présenter mon exposé sur le langage C, sur un site internet afin de m'entrainer un peu a la creation de site
+et ainsi parfaire mon code
+
+le site se compose de 4 pages, donc 
+    - une page d'accueil pour vous présenter brievement l'histoire de ce langage
+    - une page sur la base du langage afin de le comprendre à son rythme
+    - une page sur la présentation du langage, c'est sur cette page la que nous allons nous concentrer, 
+            car j'ai utilisé un carousel afin de vous montrer en image ce langage compilé
+    - une page de pratique pour vous montrer un petit jeu en langage C
+
+
+Pour l'histoire
+    Le langage C a été inventé dans les années 70  par Ken Thompson et Dennis Ritchie dans le New Jersey
+    Ken avait développé le prédécesseur de C: le B . Mais avant tout cela il y a eu 
+        - l'algol (langage de programmation 1950)
+        - le CPL (langage de programmation 1960)
+        - le BCPL (langage de programmation procédural 1967)
+    Puis un beau jour le langage C a fait son apparition. 
+    Pour ensuite être améliorer et appeler langage C++, qui n'est rien d'autre que le langage C 
+        avec des ajouts permettant de programmer d'une facon differente
+
+Base du langage
+    Nous n'allons pas voir cette page en detail, je vous laisserais le temps de la parcourir plutard
+    c'est juste une explication plus détailler de ce cour avec des images zoomés afin de bien comprendre les fonctions ainsi que l'execution des étapes.
+
+Présentation du langage 
+    Voici donc un carousel qui vous présente le fonctionnement du langage, 
+        - ici nous avons rapidement l'histoire du langage comme nous l'avons deja vu il a été inventé en 1972.
+        - Le compilateur fait le lien entre le langage C et le langage machine, c'est comme un traducteur. le langage C est traduit en langage binaire
+                sur l'image on peut voir 2 fichier .h qui sont des préprocesseur lancé au debut de la compilation,
+                qui sont compilé en main.c qui est un fichier source créer par l'utilisateur 
+                qui est lui même compilé en main.o comme fichier object 
+                afin d'etre transformé en fichier .exe qui est un fichier programme executable binaire comme on trouve sur nos pc Windows lorsque nous installons un logiciel.
+        - La compilation, c'est a dire la traduction du compilateur se divise en 4 phases :
+                - le traitement par le préprocesseur : le fichier source est analysé et transformé (ex : remplacement de chaine de caractères) par le préprocesseur
+                - la compilation traduit le fichier par le préprocesseur en assembleur ce qui rend le fichier lisible 
+                - l'assemblage transforme le code assembleur en fichier binaire pour la lecture par le processeur 
+                - l'édition de liens tout les fichiers sources sont alors assemblés et lier entre eux afin de produire un fichier executable
+        - Pour coder en langage C il faut un editeur de texte, un compilateur et un débogueur 
+                il existe 2 possibilités 
+                    soit on récupere les 3 programmes séparément 
+                    soit on utilise un IDE environnement de développement
+                        dans notre cas nous utiliserons Code::Block
+                        
+                
+
+
+Mario Sokoban a été inventé dans les années 80 par Hiroyuki Imabayashi, 
+    Sokoban signigie "magasinier" et ce jeu a remporté un concours de programmation a cette époque

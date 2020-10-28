@@ -1,0 +1,114 @@
+exo 5 fonction recursive
+
+def recursivite(n):
+   Si nb > 2:
+        retourner n * recursivite(n - 1)
+    retourner n
+	
+CORRECTION 
+
+	
+
+exo 6
+
+algo 
+si k = 0 ou 1 alors 
+	retourner k 
+sinon retourner (k-1) + k-2)
+
+FIBONACCI 
+
+Algo MontantTTC
+fonction fibonacci (n :entier) :entier
+
+debut	
+	Si (n = 0, alors retourner 0; finSi
+	si (n=1) alors retourner 1; finSi
+	retourner fibonacci (n-1) + fibonnaci (n-2);
+fin 
+
+variable n: entier; 
+debut 
+	lire(n);
+	ecrire ("Resultat:", fibonacci(n));
+fin 
+
+_____________________________________________________________________
+ 
+exo 1
+
+fonction nbCaracteres 
+(a: string, b : caractere) : entier
+
+debut
+	cpt:= 0 
+	pour a:= 1 à length(a) faire
+		si (a(i)=b) alors cpt := cpt+1; 
+		finsi
+	finpour
+	retourner cpt;
+fin
+
+variable 
+mot : string; lettre : caractere; cpt : entier
+
+debut
+	lire (mot, lettre);
+	cpt := nbCaracteres(mot, lettre);
+	ecrire ("Pour la phrase:"& mot&", il existe" &cpt&lettre);
+fin
+
+_____________________________________________________________________
+exo 2 
+
+procedure ordre
+
+
+debut
+	pour a:= 1 à lenght(a) faire
+		si (a< a+1) alors permuter (a,a+1)
+___________________________________________________________________
+
+exo 3 
+
+fonction compter
+(phrase: string, mot : string) : entier	
+cpt, i, j, k : entier
+trouve : boleen;				 
+
+debut
+cpt := 0 
+	pour (i:= 1 à length(phrase)) faire 	
+		si (phrase(i) := (mot1) alors;
+			si (i < length(phrase)) alors k := i+1;					// k temporaire
+			trouve := vrai;	
+			pour (j:= 2 à length(mot)) faire                          
+				si (phrase(k))!= (mot(j)) alors 
+					trouve := faux;
+					j := length(mot);           
+				FinSi 
+				k++; 
+			finpour				
+			sinon si (length(mot) = 1) alors cpt++;
+					finSi
+			finSi							
+			trouve := vrai;							                         					
+		    si trouve = vrai alors cpt++;
+            finSi  
+        finSi
+	finpour
+	retourner cpt;
+fin 
+		
+variable 
+mot :string, lettre : caractere; cpt : entier;
+
+debut 
+	lire(phrase, mot);
+    cpt := compter(phrase,mot);
+    ecrire (cpt);
+fin
+
+_________________________________________________________	
+
+            

@@ -1,0 +1,23 @@
+git pull        recupere le dossier sur le serveur
+fit push        met le dossier sur le serveur
+git clone url       clone le dossier
+git commit -m
+
+git pull origin master          >       git fetch   recupere les maj    
+                                >       git merge   fusionne
+
+
+git pull rebase origin master   >       
+
+
+
+
+
+git clone URL           recupere le dossier sur github
+gitt add*               rajouter un fichier modifier ou créer
+git commit -m           avertis que j'ai modifier
+git log                 voir la modification
+
+git pull origin master  recupere les modif de lautre personne
+git log                 historique
+

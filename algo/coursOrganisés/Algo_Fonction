@@ -1,0 +1,303 @@
+Exo 1.6 Ecrire un algorithme permettant d'échanger les valeurs de deux
+	Variables A et B, et ce quel que soit leur contenu préalable.
+
+algo_permute
+procedure permuter
+var a, var b : entier       a = 1   b=22            var a=1     var b =22
+var c : entier
+debut 
+    c := a;                 1 =  1                  1 = 1
+    a := b;                 1 = 22                  1 = 22  
+    b := c;                 22= 1                   22 = 1
+fin
+_____
+var a, b : entier           a=1     b=22            a=22    b=1
+debut
+lire(a,b);                  a=1     b=22            a=22    b=1
+    permuter (a,b)
+fin
+_______________________________________________________________________
+exo 1.7 on dispose de trois variables A, B et C. Ecrivez un algorithme
+	transférant à B la valeur de A, à C la valeur de B et à A la 		
+	valeur de C.
+
+algo_permute
+procedure permuter
+var a, var b, var c : entier
+var d : entier
+debut
+    d := a;
+    a := c;
+    c := b;
+    b := d;
+fin 
+
+var a, b, c : entier
+debut
+lire(a,b,c)
+        permuter (b,a), (c,b), (a,c) 
+fin 
+_______________________________________________________________________
+exo 2.3 Ecrire un programme qui lit le prix HT d'un article, le nb 
+    d'articles et le taux de TVA, et qui fournit le prix total TTC 
+    correspondant.
+
+algo montantTTC
+fonction calculMontantTTC (pu :réel, qt : entier, tva :entier) :réel;
+debut
+    retourner pu * qt *(1 + TVA /100); 
+fin
+
+variables 
+prix :réel ; qt, TVA :entier
+debut
+    lire(prix, qt, TVA)
+    ecrire ("le montant TTC est :", calculMontantTTC (prix, qt, TVA)
+fin
+_______________________________________________________________________
+exo 3.3  Ecrire un algorithme qui demande trois noms à l'utilisateur et 
+    l'informe ensuite s'ils sont rangés ou non dans l'ordre alphabétique.
+algo_ ordre
+
+algo_classement
+procedure ordre
+a, b, c : string                       // pas de var (pas de modification)
+debut
+    si a<b et b>c alors
+        ecrire ("dans l'ordre")
+        sinon ecrire ("pas dans l'ordre")
+    finsi
+fin
+
+var a, b ,c : string 
+lire (a, b, c);
+    dans lordre (a,b,c)
+FinSi
+Fin 
+
+CORRECTION bis
+
+fonction ordre      
+a, b, c : string                            
+debut
+    si (a<b et b>c) alors retourner vrai 
+                    sinon retourner faux
+    finsi
+fin
+var a, b ,c : string 
+lire (a, b, c);
+    Si dans lordre (a,b,c)
+        alors ecrire ("dans l'ordre")
+        sinon ecrire ("pas dans l'ordre") 
+FinSi
+Fin   
+_______________________________________________________________________
+exo 4.8 Ecrire un algorithme qui après avoir demandé un numero de jour,
+    de mois et d'année, renvoie s'il s'agit d'une date valide
+    
+debut
+lire (j,m,a); 
+est bisextile = (a%400=0 ou (a%4=0 et a%100!=0)     
+    Si (j>31 ou m>12) ou
+    m= 2 et ((est bisextile et j>29) ou (!est pas bisextile et j>28)
+        ou (m=4 ou m=6 ou m=9 ou m=11) et j>30);
+    alors ecrire ("date NV");
+    sinon ecrire ("date V");
+    
+CORRECTION
+    
+algo année
+fonction isdatevalide (j,m,a : entier) : booléen
+variable est bisextile : booléen;
+debut 
+est bisextile : (a%400=0 ou (a%4=0 et a%100!=0)) 
+    si (j>31 ou m>12) ou 
+    m=2 et ((est bisextile et j>29) ou (!est pas bisextile et j>28)
+        ou (m=4 ou m=6 ou m=9 ou m=11) et j>30)
+        alors retourner faux
+        sinon retourner vrai;
+fin
+variable j,m,a :entier;
+    estbisextile : booléen;
+    
+debut 
+lire(j,m,a);
+si (isdatevalide(j,m,a))
+    alors ecrire ("date valide)
+    sinon ecrire ("date invalide);
+fin 
+_______________________________________________________________________
+exo 5.6  Ecrire un algorithme qui demande un nb de départ et qui calcule
+    sa factorielle. 5  : 1*2*3*4*5
+
+fonction_factorielle
+var n : string
+debut
+    Si (n=1) alors retourner 1
+        sinon retourner n * factorielle (n-1);
+fin
+_______________________________________________________________________
+exo 5.9 Lire la suite des prix en euros et terminée par 0 des achats d'un client.
+    Calculer la somme qu'il doit, lire la somme qu'il paye et simuler la 
+    remise de monnaie en affichant 10E, 5E, 1E a rendre.
+
+algo_prix
+Fonction rendremonnaie, (argent : entier; montant : entier) : tableau d'entiers
+variable Rest : entier; tab(1:3) : tableau d'entiers
+debut
+    Rest := Argentclient - Montant;
+    tab(1) := Rest/10;
+    tab(2) := (rest%10)/5
+    tab(3) := (Rest%5)
+    retourner tab;
+fin 
+
+var argent, montant : entier; tab (1:3) tableau d'entiers
+debut
+    lire(argentclient, montant)
+    tab := rendremonnaie (argentclient, montant)
+    ecrire ("bd" tab(1) "bc", tab(2)," P tab(3))
+fin
+_______________________________________________________________________
+exo 7.2 Ecrivez un algorithme qui trie un tableau dans l'ordre décroissant.
+algo tab                                        
+Procedure permuter
+    variable tab(1:n) : tableau d'entiers
+                min, pos : entier; 
+debut
+    min : = tab(i), pos := i
+    Si tab(j) < min 
+        alors min := tab(j) ; pos := j
+    Finsi 
+fin 
+
+variable tab(i), tab(pos) : tableau d'entiers
+debut
+    lire tab(i) := tab(pos)
+    permuter (tab(i), tab(pos))
+fin
+_______________________________________________________________________
+exo 7.3 Ecrivez un algorithme qui inverse l'ordre des éléments d'un tableau
+    dont on suppose qu'il a été préalablement saisi.
+
+debut                           
+pour(i=1; i<n; i++)              
+    temp:= tab(i);                 
+    tab(i):= tab(n);                   
+    tab(n):= temp;                     
+Finpour                         
+Fin      
+
+7.3	
+
+algo inverse
+variable tab(1,n) : entier
+			i, n, temp : entiers
+
+procédure inverser(var A, var B : entiers)
+variable temp
+	debut 		
+		temp := tab(A);											
+		tab(A) := tab(B);										
+		tab (B) := temp;
+	fin
+
+
+Debut						
+	i:=0;
+	Répéter									
+		inverser (tab(i+1, tab(n-1));											
+		i++	;														
+	jusqu'à ((i+1)>=(n/2)) 					
+Fin
+_____________________________________
+7.5  
+
+algo dico
+fonction exist(mot: string, dicto:tableau de string): booléen
+variables trouve : booléen,
+    indiceD, indiceF, indiceM : entier;
+Début
+    trouve := faux;
+    indiceD := 1; indiceF := n;
+    répéter
+        indiceM := (indiceD + indiceF) /2;
+        si(mot > dicto(indiceM)) 
+            alors
+                indiceD := indiceM + 1;
+            sinon si (mot < dicto(indiceM))
+                        alors
+                            indiceF := indiceM - 1; 
+                        sinon
+                            retourner vrai;                 
+                  fin_si
+        fin_si
+    jusqu'a (trouve ou indiceD > n ou indiceF <=0)
+    retourner faux;
+Fin_fonction
+variables 
+    dicto(1:n) : tableau de chaines de caractères,
+    mot : chaine de caractère;
+Début
+    lire(mot);
+    si(exist(mot, dicto)) 
+        alors ecrire("mot trouvé");
+        sinon ecrire("mot non trouvé");
+    
+Fin
+
+____________
+
+exo fonctions part II
+
+
+exo 1
+algo caractère
+
+fonction apparition(a: chaine de caractère, b:caractère):entier
+variable 	i, j: entier
+		
+Debut
+	j:=0
+	pour i=1, i<= lenght(a), i++
+	si b := a(i) alors
+						j:= j+1
+	fin si
+	retourner j
+Fin
+
+variable chaine(1,20): string
+		y : caractere
+Debut
+	lire (chaine(1,20))
+	lire(y)
+	resultat := apparition(chaine(1,20), y)
+	ecrire ("le caractère " & y & " est affiché ", & résultat &, " fois")					// si &  n'a pas d'intérêt dans une phrase, ça en a dans une variable.
+fin
+
+_________________________________________________________________
+exo 3
+
+fonction apparition(a: chaine de caractère, b:chaine de caractère):entier
+variable 	i, j: entier
+		
+Debut
+	j:=0
+	pour i=1, i<= lenght(a), i++
+	si b := a(i) & a(i+1)
+						j:= j+1
+	fin si
+	retourner j
+Fin
+
+variable chaine(1,n): string
+		y(1,2) : string
+Debut
+	lire (chaine(1,n))
+	lire(y)
+	resultat := apparition(chaine(1,n), y)
+	ecrire ("le caractère " & y & " est affiché ", & résultat &, " fois")					// si &  n'a pas d'intérêt dans une phrase, ça en a dans une variable.
+fin
+
+fonction définies par l'utilisateur
+___________________________________

@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header img { 
+    width: 35%;
+    height:200px;
+    z-index: 2!important;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x:hidden!important;
+}
+
+#banner_move {
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(199, 171, 149);
+    transition-property: transform;
+    transition-duration: 10s;
+    transition-timing-function: ease;
+    transform: translateX(1500px);
+}
+
+#container {
+    display: block;
+    width:100%;;
+}
+
+.infos {
+    position: absolute;
+    top:20px;
+    width:100%;
+    text-align: right;
+    right:10px;
+    z-index: 10;
+    color: rgb(105, 56, 28);
+    font-size: 10px
+}
+
+.infos a {
+    text-decoration: none;
+    color: black;
+}
+
+.infos a:hover {
+    opacity: .7;
+}
+
+#footer_move {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background-color: rgb(199, 171, 149);
+
+    transition-property: transform;
+    transition-duration: 20s;
+    transition-timing-function: ease;
+    transform: translateY(280px);
+    overflow: hidden;
+}
+
+.name {
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form {
+    padding-top: 30px
+}
+
+main{
+    padding:10px;
+    float: left;
+}
+
+.gauche,.droite {
+    width: 100%;
+}
+
+.gauche h2, h4, .droite h2, footer h3 {
+    color:rgb(116, 70, 27)
+}
+
+.gauche h5, .date {
+    color:rgb(192, 142, 96)
+}
+
+.gauche p, .exp, .droite p, li, footer p {
+    color:grey;
+    list-style-type: none;
+}
+
+.gauche{
+    margin-bottom: 60px;
+}
+
+.gauche p{
+    margin-bottom: 0px
+}
+
+.gauche h4{
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.droite {
+    text-align: right;
+    padding-bottom: 40px
+}
+
+.qual {
+    padding-top: 50px
+}
+
+hr {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    width: 100%;
+    float: left;
+}
+
+#footer, .sign {
+    text-align: center;
+}
+
+footer p {
+    padding-top: 10px
+}
+
+.sign {
+    padding-top: 30px
+}
+
+@media (min-width: 768px) { 
+
+    header img { 
+        width: 150px;
+        height:200px;
+        z-index: 2!important;
+    }
+
+    .infos{
+        text-align: center;
+        width: calc(100% - 200px);
+        right:0!important;
+        font-size: 20px
+    }
+
+    main{
+        padding:80px;
+    }
+    .gauche,.droite{
+        width: 50%;
+        float: left;
+    }
+
+    .droite {
+        text-align: right;
+        padding-top: 100px
+    }
+    
+    .gauche p, .droite p{
+        padding: 10px;
+    }
+    #banner_move {
+    transform: translateX(150px);
+}
+ }

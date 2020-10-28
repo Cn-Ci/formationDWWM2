@@ -1,0 +1,82 @@
+Exo 3 
+Ecrire un algorithme qui permet de saisir une chaîne de 20 caractères maximum 
+et un deuxième chaine, puis affiche le nombre de fois que la deuxième chaine 
+apparaît dans la chaîne initialefonction compter.
+
+(phrase: string, mot : string) : entier	
+cpt, i, j, k : entier
+trouve : boleen;				 
+
+debut
+cpt := 0 
+	pour (i:= 1 à length(phrase)) faire 	
+		si (phrase(i) := (mot1) alors;
+			si (i < length(phrase)) alors k := i+1;					// k temporaire
+			trouve := vrai;	
+			pour (j:= 2 à length(mot)) faire                          
+				si (phrase(k))!= (mot(j)) alors 
+					trouve := faux;
+					j := length(mot);           
+				FinSi 
+				k++; 
+			finpour				
+			sinon si (length(mot) = 1) alors cpt++;
+					finSi
+			finSi							
+			trouve := vrai;							                         					
+		    si trouve = vrai alors cpt++;
+            finSi  
+        finSi
+	finpour
+	retourner cpt;
+fin 
+		
+variable 
+mot :string, lettre : caractere; cpt : entier;
+
+debut 
+	lire(phrase, mot);
+    cpt := compter(phrase,mot);
+    ecrire (cpt);
+fin
+
+_______________________________________
+Exo 1 
+Ecrire un algorithme permettant de chercher le nombre de voyelles 
+dans un mot (saisi par l’utilisateur). Utiliser les ensembles.
+
+type lettres :set of caractere
+variables voyelles : lettres; mot : string; i : entier
+
+debut
+cpt := 0
+lire(mot);
+voyelle := {'A','a','E','e','I','i','O','o','U','u','Y','y'}
+    pour (i := 1 à length(mot)) faire
+        si (mot(i) IN voyelles) alors
+            cpt ++;
+        finSi 
+    finPour 
+fin
+
+_______________________________________
+Exo 2
+On souhaite construire une structure «etatCivil» permettant d’enregistrer le nom d’une personne, 
+la ville où elle réside et son année de naissance. 
+Construire cette structure ainsi qu’un tableau permettant de stocker 10 structures de ce type.
+
+Type etatCivil= enregistrement
+nom : String;
+ville : String;
+annee de naissance : entier 
+fin_enregistrement;
+
+variables Personnes (1:10); tableau de etatCivil
+debut 
+    Pour (i := 1 à 10) faire
+        lire (personnes(i).nom);
+        lire (personnes(i).ville);
+        lire (personnes(i). année de naissance);
+    finpour
+fin
+

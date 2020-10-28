@@ -1,0 +1,34 @@
+body {
+    background-image: url(bg.jpg);
+    margin: auto;
+}
+
+.lien1 a,
+.lien2 a,
+.lien3 a,
+.lien4 a {
+    text-decoration: none;
+    color: #c98ca0;
+}
+
+.lien1 a:hover,
+.lien2 a:hover,
+.lien3 a:hover,
+.lien4 a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.lien1 {
+    border: 5px outset #c98ca0;
+    margin-top: 150px;
+    margin-right: 10px;
+}
+
+.lien2,
+.lien3,
+.lien4 {
+    border: 2px outset #c98ca0;
+    margin-top: 50px;
+    margin-right: 10px;
+}

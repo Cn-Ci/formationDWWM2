@@ -1,0 +1,34 @@
+variables 
+		phrase, mot : string
+
+fonction compter(phrase: string, mot:string)	
+variables cpt, i, j, k : entier
+		  trouve : booleen;
+début
+	cpt:=0;
+	pour(i:=1 à length(phrase))faire
+		si(phrase(i) = mot(1)) alors
+			si(i < length(phrase)) alors 
+				k:=i+1;
+				trouve := vrai;
+				pour(j:=2 à length(mot)) faire
+					si(mot(j) != phrase(k)) alors 
+						trouve := faux;
+						j:= length(mot);
+					finsi
+					k++;			
+				fin_pour
+			sinon si(length(mot) = 1) alors cpt++;
+				  finsi
+			finsi
+			
+			si(trouve) alors cpt++;
+	fin_pour
+	retourner cpt;
+fin_pour
+
+début
+	lire(phrase, mot);
+	cpt := compter(phrase, mot);
+	ecrire(cpt);
+fin

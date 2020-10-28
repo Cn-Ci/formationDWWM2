@@ -1,0 +1,258 @@
+﻿    Exo 1: 
+    ALLO => OK Allo => OK allo => OK aLlo => KO 
+    isUpper (c:caractère): booleen 
+    isLower(c:caractère):booleen 
+                                                            <!-- Correction  -->                                        
+    algo_maj var mot, n, i :entier                          fonction_toutMaj (mot:string): booleen          fonctionPasValide (mot:string) : booleen
+    trouve : booleen                                        trouve := vrai;                                 Si (isUpper(mot(1))) et isUpper(mot(2)) alors;             
+                                                            Pour i := 1 à n faire;                              Pour i := 3 à n faire;
+    debut                                                       Si (isLower(mot(i))) alors;                         Si (isLower(mot(i))) alors retourner faux;
+    ecrire ("Saisir un mot");                                       trouve := faux;                                 finSi
+    trouve := faux;                                             finSi                                       sinon 
+                                                            finPour                                             Pour i := 2 à n faire;
+    si isUpper(mot(1)) alors                                                                                        Si (isUpper(mot(i))) alors retourner faux;
+            Pour ( i := 1, i <= n, i++) faire;              si (trouve) alors retourner vrai;                       finSi
+                Si isUpper(mot(i)) alors;                       sinon retourner faux;                           finPour
+                    trouve := vrai;                         finSi                                           finSi
+                    sinon trouve := faux                    retourne trouve;                                Retourner Vrai
+                finSi                                       fin_fonction       
+            finPour                                                         
+    finSi                                                   fonction_toutMin (mot:string): booleen    
+                                                            trouve := vrai;
+        si isUpper(mot(1)) alors;                           Pour i := 1 à n faire;                        
+            pour ( i := 1, i <= n, i++) faire;                  Si (isUpper(mot(i))) alors;                
+                si (isLower(mot()) alors                            trouve := faux;            
+                            trouve := vrai;                     finSi            
+                            sinon trouve := faux            finPour                     
+                finSi                                       
+            finPour                                         si (trouve) alors retourner vrai;
+        finSi                                                   sinon retourner faux;             
+                                                            finSi 
+        si isLower(mot(1)) alors;                           fin_fonction                         
+            pour ( i := 2, i <= n, i++ )                             
+                    si isLower(mot(i)) alors;               fonction_toutMajMin (mot:string): booleen            
+                            trouve := vrai;                 indiceInitial : entier;   
+                            sinon trouve := faux;           Si (isUpper(mot(1))) et toutMin(mot,2) alors;        
+                    finSi                                       retourner vrai;            
+            finPour                                         sinon retrouver faux;
+        finSi                                               finSi
+                                                            fin_fonction
+    si trouve ecrire ("OK");
+    sinon ecrire ("KO");                                    lire(mot);
+    fin                                                        Si (ToutMin(mot,1)) ou 
+                                                                    toutMaj(mot) ou 
+                                                                    toutMajMin(mo) alors;
+                                                                    ecrire ("OK");
+                                                                    sinon ("KO")
+
+___________________________________________________________________________________________________________________________________________________________________________
+Exo 9.3 :
+Ecrivez un algorithme qui demande une phrase à l'utilisateur et 
+qui affiche à l'ecran le nb de mots de cette phrase. On suppose 
+que les mots ne sont séparés que par des espaces. 
+
+fonctionNbMot (mot :string) : entier
+debut
+    Ecrire ("Saisir une phrase");
+    nbmot = 1 
+    Pour i := 1 à n
+        Si phrase(mot,1,n) = " " alors;
+            nbmot = nbmot +1;
+            Si phrase(mot,1,n) = "." alors
+            ecrire ("il y a ", mot" dans la phrase)
+            finSi
+        finSi
+    finPour
+fin
+
+___________________________________________________________________________________________________________________________________________________________________________
+Exo 9.4 : 
+Ecrivez un algorithme qui demande une phrase à l'utilisateur et qui 
+afficher à l'écran le nombre de voyelles contenues dans cette phrase.
+
+fonctionVoyelle (mot : string) : entier                                     Correction
+debut                                                                       debut
+    Ecrire ("Saisir une phrase");                                           type 	voyelles = ensemble de caractères    
+    nbVoyelle := a,A, e,E, i,I, o, O, u,U, y,Y                                  variable mot(1,n) : tableau de chaine de caractères    
+    Pour i := 1 à n                                                             voyelles : lettres; cpt : entiers; i : entiers            
+        si phrase(mot,i,n) = nbVoyelle alors;                                   
+               Si phrase(mot,1,n) = "." alors                               debut    
+                ecrire ("il y a", nbVoyelle" dans la phrase)                    voyelles = ['a','e','i','o','u','y','A','E','I','O','U','Y'];                
+        finSi                                                                   cpt := 0                    
+    finPour                                                                         pour i:=1 jusqu'à length(mot) faire        
+fin                                                                                     si voyelles IN mot(i) faire;    
+                                                                                            cpt++;
+fonctionVoyelle (mot : string) : entier                                                 fin si    
+debut                                                                               fin pour
+    Ecrire ("Saisir une phrase");                                               ecrire ("Il y a ", cpt, "voyelles dans le mot saisi.")       
+    nbVoyelle := a,A, e,E, i,I, o, O, u,U, y,Y                              fin                
+    trouve : Faux;                                                                  
+        Pour i := 1 à n                                                                     
+            si phrase(mot,i,n) = nbVoyelle alors trouve := vrai;                                      
+            finSi
+        finPour
+    ecrire ("il y a", nbVoyelle" dans la phrase)
+fin 
+
+___________________________________________________________________________________________________________________________________________________________________________
+exo 9.5 :
+Ecrivez un algorithme qui demande un phrase à l'utilisateur. Celui-ci 
+entrera ensuite le rang d'un caractère à suprrimer, et la nouvelle 
+phrase doit être affichée.
+                                                                            Correction
+FonctionSupp (mot :string) : entier                                         resultat 1  Mid(mot,1, i-1)
+debut                                                                       resultat 2  Mid(mot, i-+1, n-i)    
+    ecrire ("Saisir une phrase");                                                       mot := r1 & r2
+    ecrire ("Supprimer un caractère");                                              
+    Pour i := 1 à n faire;                                                              
+        Mid(phrase(mot,i,nbc-1)) et Mid(phrase, nbc +1, n - nbc);                               
+        ecrire ("la nouvelle phrase est",phrase);                                       
+    finPour                                                                     
+fin                                                                                     
+
+___________________________________________________________________________________________________________________________________________________________________________
+Exo 9.6 :
+Un des plus anciens stystème de cryptographie consitste à décaler les       
+lettre d"un message pour le rendre illisible. Ainsi, les A deviennent   
+des B, les B des C, etc. Ecrivez un algorithme qui demande une phrase 
+à l'utilisateur et qui la code selon ce principe.
+
+FonctionDecale (mot:string) : entier                                        Correction 
+debut                                                                       fonctionChiffrer (mot:string) : entier             
+    ecrire ("Saisir une phrase");                                           variable alpha (1:26); tab_string; pos :entier; 
+    alpha(a) = 1                                                            debut     
+    Pour i := 1 à n faire;                                                      alpha := ["a","b",...,"y","z"]      
+        Mid(phrase(mot,i,n)) et Mid(phrase(mot,alpha +1));                  Pour i := 1 à lenght(mot) faire;                
+            Si alpha(z) := 26 alors;                                            pos := trouve (alpha,mot(1));            
+                alpha(z) := alpha(a);                                           Si (mot(i)) = "z" alors
+        ecrire ("la nouvelle phrase est",phrase);                                   mot(i) := "a"
+    finPour                                                                         sinon mot(i) = alpha(pos+1);               
+fin                                                                             finSi
+                                                                            finPour
+                                                                            retourner mot;
+                                                                            fin_fonction
+
+
+                                                                            fonctionTrouve (aplha:tableau caractère; lettre : caractère) : entier
+                                                                            debut
+                                                                                Pour i := 1 à length(alpha)
+                                                                                    Si alpha(i) = lettre alors
+                                                                                    retourner i;
+                                                                                finPour
+                                                                            retourner -1;
+                                                                            fin
+
+___________________________________________________________________________________________________________________________________________________________________________
+Exo 9.7 :                                                                            
+Realiser un algorityhme sur le meme principe que le précédent, mais                 
+qui demande en plus quel est le decalage à utiliser.                                        
+
+fonctionChiffrer (mot:string) : entier                                      Correction   
+variable alpha (1:26); tab_string; pos entier                               fonctionChiffrer (mot:string; d: entier)   
+                                                                            variable alpha (1:26); tab_string; pos entier
+fonctionTrouve (alpha:tableau; lettre:caractère) : entier                   debut                            
+debut                                                                           alpha := ["a","b",...,"y","z"]     
+    Pour i := 1 à length(alpha)                                                     Pour i := 1 à lenght(mot) faire;
+        Si (alpha(i)) = lettre alors                                                    pos := trouve (alpha,mot(decal));
+        retourner i;                                                                    posTemp := pos + d;
+    finPour                                                                             realPos := (pos + d) - 26;     Ou realPos := (pos+ d)% 26    
+retourner -1;                                                                               mot(i) := alpha(realPos);
+fin_fonction                                                                        finPour
+                                                                            retourner mot;
+debut                                                                       fin
+    alpha := ["a","b",...,"y","z"]
+    ecrire ("Saisir decalage")
+        Pour i := 1 à lenght(mot) faire;
+        pos := trouve (alpha,mot(decal));
+            Si (mot(i)) = "z" alors
+                mot(i) := decal 
+                sinon (mot(i)) = alpha ((pos+decal) -26;
+            finSi
+        finPour
+    retourner mot;
+    fin_fonction
+
+___________________________________________________________________________________________________________________________________________________________________________
+Exo 9.8 :
+Ecrire un algorithme qui effectue ce cryptage par substitution aléatoire
+
+fonctionChiffrer                                                            Correction
+fonctionTrouve (alpha:tableau; lettreclé:caractère) : entier                fonctionChiffrer (mot :string,alphaclé:tab string) : string
+debut                                                                       debut   
+    Pour i := 1 à length(alpha)                                             alpha := ["a","b",...,"y","z"]     
+        Si (alpha(i)) = lettreclé alors                                     Pour i := 1 à legnht(mot) faire;    
+        retourner i;                                                            pos := trouve (alpha, mot(1));
+    finPour                                                                     mot(i) := alphaClé(pos);        
+retourner -1;                                                               finPour    
+fin_fonction                                                                retourner mot;   
+                                                                            fin 
+debut                                                                       
+    alpha := ["a","b",...,"y","z"]                                              
+    ecrire ("Saisir l'alphabet clé")                                            
+        Pour i := 1 à lenght(mot) faire;                                            
+        pos := trouve (alpha,mot(decal));                                       
+            Si (mot(i)) = "z" alors                                                 
+                mot(i) := decal                                                             
+                sinon (mot(i)) = alphaclé (pos+decal);                                             
+            finSi                                                                           
+        finPour                                                                                 
+    retourner mot;                                                                  
+    fin_fonction                                                                
+
+___________________________________________________________________________________________________________________________________________________________________________
+Exo 9.9 : 
+Ecrire un algorithme qui effectue un cryptage de Vigenère, en 
+demandant bien sur au départ la clé à l'utilisateur. 
+"il ..." VIGENERE   I, 9eme devient D: V +9 = D
+                    L, 12eme devient S: I +12 = S
+
+fonctionTrouve (alpha:tableau; lettreclé:caractère) : entier
+debut  
+    Pour i := 1 à length(phrase) faire
+        (phrase(1)) = pos(V) + (pos(alpha(1))) ou
+        (phrase(i)) = (pos(alpha(i-1)) + (pos(Alpha(i)))
+        retourner i;
+    finPour
+retourner -1; 
+fin_fonction 
+
+
+___________________________________________________________________________________________________________________________________________________________________________
+Exo 9.10 : 
+Ecrivez un algorithme qui demande un nombre entier à l'utilisateur. 
+L'ordinateur affiche ensuite le message "Ce nb est pair" ou "Ce nb 
+est impair" selon le cas.
+
+fonctionPair (nb :entier)
+debut
+    ecrire ("Saisir un nb");
+    Si n/2 = Entier (n/2) alors; 
+        ecrire (,n" est pair");
+        sinon ecrire (,n" est impair");
+    finSi
+fin 
+
+___________________________________________________________________________________________________________________________________________________________________________
+Exo 9.11 :
+Ecrivez les algorithmes qui génèrent un nb Glup aléatoire tel que .. 
+
+a) 0 <= Glup < 2
+    Glup := Alea()*2
+
+b) -1 <= Glup < 1
+    Glup :=  Alea() *2 -1
+
+c) 1.35 <= Glup < 1.65 
+    Glup := Alea() *0.30 + 1.35
+
+d) Glup émule un dé à six faces
+    Glup := Ent(Alea() *6) +1
+
+e) -10,5 <= Glup < +6,5
+    Glup := Alea() *17 -10.5
+
+f) Glup emule la somme du jet simultané de deux dés à six faces
+    Glup := (Ent(Alea()*6) +1) + (ent(Alea()*6) +1)
+
+
+

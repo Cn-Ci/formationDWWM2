@@ -1,0 +1,57 @@
+body {
+    background-color: black
+}
+
+p {
+    color: palevioletred;
+    font-style: justify;
+}
+
+h1 {
+    color: grey;
+    font-size: 60px;
+    text-align: center;
+}
+
+ul {
+    color: green
+}
+
+ol {
+    color: sandybrown
+}
+
+h2 {
+    color: teal;
+    font-style: italic
+}
+
+.dominer {
+    color: slateblue;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.gloire {
+    color: hotpink;
+    text-decoration: line-through;
+}
+
+.chat {
+    font-size: 100px
+}
+
+.Texte {
+    font-size: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify
+}
+
+h3 {
+    text-align: right;
+    color: darkred
+}
+
+.form {
+    color: ghostwhite
+}
