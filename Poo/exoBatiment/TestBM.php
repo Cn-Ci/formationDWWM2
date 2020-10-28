@@ -1,7 +1,7 @@
 <?php
 
 include_once('Batiment.php');
-include_once('Maison.php');
+
 
 $batiment = new Batiment("Roubaix", 123);
 $batiment1 = new Batiment("Tourcoing", 345);
