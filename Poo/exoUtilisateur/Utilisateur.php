@@ -8,8 +8,8 @@ Class Utilisateur extends Personne {
     private $profil;
     
 
-    public function __construct(Personne $personne, Profil $profil, string $newLogin, string $newPassword, string $newService){
-        parent::__construct($personne->getId(), $personne->getNom(), $personne->getPrenom(), $personne->getMail(), $personne->getTelephone(), $personne->getSalaire());
+    public function __construct(string $id, string $nom, string $prenom, string $mail, int $telephone, int $salaire, Profil $profil, string $newLogin, string $newPassword, string $newService){
+        parent::__construct($id, $nom, $prenom, $mail, $telephone, $salaire);
         $this->profil = $profil;
         $this->login = $newLogin;
         $this->password = $newPassword;

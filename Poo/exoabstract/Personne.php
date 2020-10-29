@@ -8,29 +8,28 @@ abstract class Personne {
     protected $mail;
     protected $telephone;
     protected $salaire;
+    public static $counter = 0;
 
 
-    public function __construct(string $newId, string $newNom, string $newPrenom, string $newMail, int $newTelephone, int $newSalaire){
-        $this->id = $newId;
-        $this->nom = $newNom;
-        $this->prenom = $newPrenom;
-        $this->mail = $newMail;
-        $this->telephone = $newTelephone;
-        $this->salaire = $newSalaire;
+    public function __construct(string $id, string $nom, string $prenom, string $mail, int $telephone, int $salaire){
+        $this->id = $id;
+        $this->nom = $nom;
+        $this->prenom = $prenom;
+        $this->mail = $mail;
+        $this->telephone = $telephone;
+        $this->salaire = $salaire;
+        self::$counter++;
         }
+
 
     public function sePresenter(): string{
         return "la personne a pour id " . $this->id . " son nom est " .$this->nom . " , son prenom est  " . $this->prenom . ", son mail est " 
-        . $this->mail . " son numero de telephone est " . $this->telephone . "et son salaire est " . $this->salaire . " \n";
+        . $this->mail . " son numero de telephone est " . $this->telephone . "et son salaire est " . $this->salaire . "et il est le " . self::$counter . " ieme \n";
     }
 
 
     abstract function calculerSalaire(): float ;
              
-
-    function affiche() : void {
-        echo $this;
-    }
 
 
     /**
@@ -154,6 +153,26 @@ abstract class Personne {
         return $this;
     }
 
+    /**
+     * Get the value of counter
+     */ 
+    public function getCounter()
+    {
+        return $this->counter;
+    }
+
+    /**
+     * Set the value of counter
+     *
+     * @return  self
+     */ 
+    public function setCounter($counter)
+    {
+        $this->counter = $counter;
+
+        return $this;
+    }
+
     public function __toString() :string
         {
             return 
@@ -163,7 +182,10 @@ abstract class Personne {
             "\n [mail] : " . $this->mail . 
             "\n [telephone] : " . $this->telephone .
             "\n [salaire] : " . $this->salaire .
+            "\n [counter] : " . self::$counter . 
             "\n "
             ;
         }
+
+    
 }

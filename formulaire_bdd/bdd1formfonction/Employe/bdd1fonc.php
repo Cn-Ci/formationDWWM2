@@ -16,7 +16,7 @@
 include 'crud.php';
 
 
-if (isset($_POST['ajouter']) 
+if  (isset($_POST['ajouter']) 
 ){
                 add($_POST['no_emp'], $_POST['nom'],$_POST['prenom'],$_POST['emploi'],$_POST['embauche'], $_POST['sal'], $_POST['comm'], $_POST['noserv'], $_POST['sup'], $_POST['noproj']);
 }
