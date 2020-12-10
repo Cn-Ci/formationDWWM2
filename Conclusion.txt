@@ -1,4 +1,4 @@
-﻿semaine 1 : presentation formation, établissement, matériel, rémunération, 
+semaine 1 : presentation formation, établissement, matériel, rémunération, 
 		Algo exercices 
 
 semaine 2 : Algo exercices
@@ -23,4 +23,7 @@ Semaine 8 : BDD requete sql
 semaine 9: insertion bdd dans formulaire, avec fonction, et connection externe, bouton supprimer selon selection
 
 semaine 10 (26/10 au 1/11): fin bouton supprimer, poo
+
+Semaine 11: connexion bdd poo, bouton inscription /connexion, cookie
+
 

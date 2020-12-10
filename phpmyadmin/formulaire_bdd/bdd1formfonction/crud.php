@@ -1,7 +1,7 @@
 <?php 
 function add($a, $b, $c, $d, $e, $f, $g, $h, $i, $j) {
     $db = mysqli_init();
-    mysqli_real_connect($db,'localhost','root','','afpa_test');
+    mysqli_real_connect($db,'localhost','root','root','afpa_test');
 
     $sql = "insert into employe values($a, $b, $c, $d, $e, $f, $g, $h, $i, $j)";
 
@@ -11,7 +11,7 @@ function add($a, $b, $c, $d, $e, $f, $g, $h, $i, $j) {
 
 function modifier($a, $b, $c, $d, $e, $f, $g) {
     $db = mysqli_init();
-    mysqli_real_connect($db, 'localhost','root','','afpa_test');
+    mysqli_real_connect($db, 'localhost','root','root','afpa_test');
 
     $sql = "update employe set nom= $a, prenom=$b , emploi=$c, sal=$d , comm=$e, sup=$f where no_emp = $g";
 
@@ -22,7 +22,7 @@ function modifier($a, $b, $c, $d, $e, $f, $g) {
         
 function supprimer($a) {
     $db = mysqli_init();
-    mysqli_real_connect($db, 'localhost','root','','afpa_test');    
+    mysqli_real_connect($db, 'localhost','root','root','afpa_test');    
 
     $sql = "delete from employe where no_emp= $a";
 
@@ -32,7 +32,7 @@ function supprimer($a) {
 
 function research() {
     $db = mysqli_init();
-    mysqli_real_connect($db, 'localhost','root','','afpa_test');    
+    mysqli_real_connect($db, 'localhost','root','root','afpa_test');    
 
     $sql = mysqli_query($db, "select * from employe");
     $selectData = mysqli_fetch_all ($sql, MYSQLI_ASSOC);
@@ -41,7 +41,7 @@ function research() {
 
 function consult($a) {
     $db = mysqli_init();
-    mysqli_real_connect($db, 'localhost','root','','afpa_test');    
+    mysqli_real_connect($db, 'localhost','root','root','afpa_test');    
 
     $sql = mysqli_query($db, "select * from employe where no_emp=$a");
     $selectData = mysqli_fetch_all ($sql, MYSQLI_ASSOC);

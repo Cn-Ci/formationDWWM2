@@ -1,6 +1,6 @@
 <?php 
 $db = mysqli_init();
-mysqli_real_connect($db,'localhost','root','','afpa_test');
+mysqli_real_connect($db,'localhost','root','root','afpa_test');
 $rs = mysqli_query ($db, 'select * from employe');
 $data = mysqli_fetch_lengths ($rs);
 mysqli_free_result($rs);

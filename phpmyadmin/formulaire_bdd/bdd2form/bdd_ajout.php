@@ -45,7 +45,7 @@ if ($_GET["action"]=="add"){
 
                 /* connection a la bdd */
                 $db = mysqli_init();
-                mysqli_real_connect($db, 'localhost','root','','afpa_test');
+                mysqli_real_connect($db, 'localhost','root','root','afpa_test');
                 $rs = mysqli_query($db, "SELECT * FROM employe where no_emp = $no_empdef");
                 $data = mysqli_fetch_array($rs, MYSQLI_ASSOC);
 

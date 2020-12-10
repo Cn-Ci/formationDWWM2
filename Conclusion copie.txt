@@ -1,0 +1,14 @@
+semaine 1 : presentation formation, établissement, matériel, rémunération, 
+		Algo exercices 
+
+semaine 2 : Algo exercices
+
+semaine 3 : HTML: test 1, test 2, CV 
+            CSS : CV et responsive
+
+Semaine 4 : bootstrap imitation site, responsive 
+		nav, navbar, col, row,
+		poursuite algo, installation xamp, présentation php
+
+Semaine 5 : Php, exercice algo en ph p1 à P9 + exo du cour
+		sur terminal, avec fonctions, ect .. 

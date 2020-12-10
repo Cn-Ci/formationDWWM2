@@ -84,7 +84,7 @@ if (isset($_GET['page'])){
             $no_emp = $_GET['no_emp'];
 
             $db = mysqli_init();
-            mysqli_real_connect($db, 'localhost','root','','afpa_test');
+            mysqli_real_connect($db, 'localhost','root','root','afpa_test');
 
             //afficher données
             $sql = "SELECT * FROM employe WHERE no_emp = $no_emp";
@@ -151,7 +151,7 @@ if (isset($_GET['page'])){
         <?php
 
             $db = mysqli_init();
-            mysqli_real_connect($db, 'localhost','root','','afpa_test');
+            mysqli_real_connect($db, 'localhost','root','root','afpa_test');
             //afficher données
             $sql = "SELECT * FROM employe";
             $rs = mysqli_query($db, $sql);

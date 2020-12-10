@@ -1,0 +1,1025 @@
+Exo 1.1
+	Quelles seront les valeurs des variables A et B après exécution 
+	Des instructions suivantes ? 
+	Variables A,B en Entier
+	Debut
+	A := 1
+	B := A + 3
+	A := 3 
+	Fin 
+
+A := 3
+B := 4
+________________________________________________________________________
+Exo 1.2
+	Quelles seront les valeurs des variables A, B et C après 		
+	exécution des instructions suivantes ? 
+	Variables A, B, C en Entier
+	Debut 
+	A := 5
+	B := 3 
+	C := A + B 
+	A := 2 
+	C := B - A
+
+A := 2
+B := 3
+C := 1
+________________________________________________________________________
+Exo 1.3
+	Quelles seront les valeurs des variables A et B après exécution 
+	Des instructions suivantes ? 
+	Variables A,B en Entier
+	Debut
+	A := 5
+	B := A + 4
+	A := A + 1 
+	B := A- 4 
+
+A := 6
+B := 2
+________________________________________________________________________
+Exo 1.4
+	Quelles seront les valeurs des variables A, B et C après 		
+	exécution des instructions suivantes ? 
+	Variables A, B, C en Entier
+	Debut 
+	A := 3 
+	B := 10 
+	C := A + B
+	B := A + B 
+	A := C 
+
+A := 13
+B := 13
+C := 13
+________________________________________________________________________
+Exo 1.5
+	Quelles seront les valeurs des variables A et B après 
+	exécution des instructions suivantes ? 
+	Variables A,B en Entier
+	Debut 
+	A := 5 
+	B := 2 
+	A := B 
+	B := A 
+
+A := 2
+B := 2
+Non sa n'echange pas les valeurs, A := 2; B := 2
+________________________________________________________________________
+Exo 1.6
+	Ecrire un algorithme permettant d'échanger les valeurs de deux
+	Variables A et B, et ce quel que soit leur contenu préalable.
+Algo_echange
+variable A, B, C : entier
+A := 1
+B := 2
+debut
+lire(a)
+lire(b)
+C := A
+A := B
+B := C
+ecrire (a,b)
+fin
+________________________________________________________________________
+Exo 1.7
+	on dispose de trois variables A, B et C. Ecrivez un algorithme
+	transférant à B la valeur de A, à C la valeur de B et à A la 		
+	valeur de C.
+B := A; C := B; A := C;
+Algo_echange 
+variable A, B, C
+debut
+    lire (a,b,c)
+    D := A 
+    A := C
+    C := B
+    B := D
+    ecrire (a,b,c,d)
+fin
+________________________________________________________________________
+Exo 1.8
+	Que produit l'algorithme suivant ? 
+	variables A, B, C en Caractères 
+	debut 
+	A := "423"
+	B := "12"
+	C := A + B
+	fin 
+
+C := 435 somme
+________________________________________________________________________
+Exo 1.9
+	Que produit l'algorithme suivant ? 
+	variables A, B, C en Caractères
+	debut 
+	A := "423"
+	B := "12"
+	C := A & B
+
+C := 423 et 12
+________________________________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+
+Exo 2.1
+    Quel résultat produit le programme suivant ? 
+    variables val, double numériques
+    debut 
+    val := 231 
+    double := Val * 2
+    ecrire Val 
+    ecrire Double 
+    fin 
+
+Double := 462
+________________________________________________________________________
+Exo 2.2
+    Ecrire un programme qui demande un nombre à l'utilisateur,
+    puis qui calcul et affiche le carré de ce nombre.
+algo_carré
+variable a, b
+
+a := 9;
+debut
+    lire(a
+    sqr(a) := a * a
+    ecrire sqr(a) 
+fin
+________________________________________________________________________
+Exo 2.3
+    Ecrire un programme qui lit le prix HT d'un article, le nb 
+    d'articles et le taux de TVA, et qui fournit le prix total TTC 
+    correspondant.
+algo_TVA
+variable PrixHT (a); nbarticle (b); prixTotal (c); Tva (d)
+debut
+    ecrire ("saisir a);
+    lire (a) 
+    c := a * b + (1+c)
+    ecrire (a,b,c,d)
+fin
+________________________________________________________________________
+Exo 2.4
+    Ecrire un algorithme utilisant des variables de type chaîne de 
+    caractères, et affichant quatre variantes possible de la celebre
+    "belle marquise, vos beaux yeux me font mourir d'amour". 
+algo_variantes
+variable belle marquise (a); vos beaux yeux (b); me font mourir (c); d'amour (d);
+
+debut
+    lire (a,b,c,d);
+    debut
+    ecrire (a,b,c,d) (b,c,d,a), (c,d,a,b), (d,a,b,c)
+fin
+
+________________________________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+
+Exo 3.1
+    Ecrire un algorithme qui demande un nombre à l'utilisateur, et 
+    l'informe ensuite si ce nombre est positif ou négatif.
+algo_posneg
+variable a : entier
+
+debut   
+    lire(a);
+    si a > 0 alors 
+        ecrire (,a"est positif")
+        sinon ecrire (a,"est negatif")
+    finSi
+fin
+________________________________________________________________________
+Exo 3.2
+    Ecrire un algorithme qui demande deux nb à l'utilisateur et 
+    l'informe ensuite si leur produit est négatif ou positif.
+algo_posneg
+variable a, b : entier
+
+debut 
+    lire(a,b) 
+    si a > 0 et b >0 alors
+        ecrire ("positif")
+        sinon ("negatif")
+    finSi
+fin 
+________________________________________________________________________
+Exo 3.3 
+    Ecrire un algorithme qui demande trois noms à l'utilisateur et 
+    l'informe ensuite s'ils sont rangés ou non dans l'ordre alphabétique.
+algo_ ordre
+variable a, b, C : chaine de caractère
+
+debut
+    lire (a,b,c)
+    si a > b et b > c alors
+    ecrire ("sont classés dans l'ordre alpha")
+    sinon ("ne sont pas classé dans l'ordre alpha")
+    finSi
+fin
+________________________________________________________________________
+Exo 3.4 
+    Ecrire un algorithme qui demande un nb a l'utilisateur, et 
+    l'informe ensuite si ce nb est positif, negatif ou nul.
+algo_posneg 
+variable a : entier
+
+debut
+    lire (a);
+    si a > 0 alors 
+        ecrire ("positif"); 
+        sinon si a < 0 alors 
+            ecrire ("negatif"); 
+    sinon ecrire ("egal a zero");
+        finSi
+    finSi
+fin 
+________________________________________________________________________
+Exo 3.5
+    Ecrire un algorithme qui demande deux nb à l'utilisateur et 
+    l'informe ensuite si le produit est négatif, positif ou nul.
+
+________________________________________________________________________
+Exo 3.6
+    Ecrire un algorithme qui demande l'age d'un enfant à l'utilisateur.
+    Ensuite, il l'informe de sa catégorie :
+    Poussin (6-7); pupille (8-9); minime (10-11); cadet (+12)
+algo_age 
+variable age : entier
+
+poussin (a); pupille (b); minime (c); cadet (d); 
+
+debut 
+    lire (age)
+    Si age => 12 alors 
+        ecrire ("cadet");
+        Si age => 10 alors
+            ecrire ("minime");
+                Si age => 8 alors        
+                    ecrire ("pupille");
+                        Si age => 6 alors
+                            ecrire ("poussin");
+                                sinon ecrire ("pas classé");
+                        finSi
+                finSi
+        finSi
+    finSi
+fin
+
+________________________________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+
+Exo 4.1
+    Formulez un algorithme equivalent à l'algorithme suivant :
+    Si Tutu > toto + 4 OU tata = "OK" alors
+        tutu := tutu + 1
+        sinon tutu := tutu -1
+    finSi
+
+Algo_change
+variable tutu, toto, tata 
+
+debut 
+    lire (tutu, toto, tata);
+    Si tutu - 4 < Toto ou Tata != 0 alors   
+        tutu := tutu - 1
+        sinon tutu := tutu + 1
+    FinSi 
+Fin 
+
+________________________________________________________________________
+Exo 4.2
+    Il lira au clavier l'heure et les minutes, et affichera l'heure qu'il 
+    sera une minute plus tard. 
+algo_heure
+variable h,m : entier
+
+debut 
+    lire(h,m);
+    m := m + 1
+    Si m < 59 alors 
+        sinon m := 0 et h:= h + 1
+            Si h < 23 alors 
+            sinon h : = 0 
+            ecrire ("dans une minutes il sera",h "et", m" minutes")
+            finSi 
+    finSi 
+fin 
+________________________________________________________________________
+Exo 4.3 
+    Il lira au clavier l'heure et les minutes, et affichera l'heure qu'il 
+    sera une seconde plus tard. 
+algo_heure
+variable h, m, s : entier
+
+debut 
+    lire(h,m,s)
+    Si s < 59 alors s: s + 1 
+        sinon s := 0
+            sinon Si m < 59 alors   
+                m := m + 1 
+                sinon m := 0 
+                    Si h < 23 alors 
+                        h := 0 
+                        sinon h :=  h + 1 
+                        ecrire ("dans une seconde, il sera"
+                                , h"heures",m"minutes", s"secondes")
+                    finSi
+            finSi
+     finSi
+fin
+________________________________________________________________________
+Exo 4.4
+    Un magasin de reprographie facture 0,10 E les dix premières photocopies
+    0,09 E les vingt suivantes et 0,08 au dela. Ecrivez un algorithme qui
+    demande a l'utilisateur le nb de photocopies effectuées et qui affiche 
+    la facture correspondante.
+algo_photocop
+variable quantité (q), prix (p);
+ 
+debut
+    lire(quantité);
+    Si q <= 10 alors 
+        p = q * 0,10 
+        Si q <= 30 alors
+            p = (q - 10) * 0,09 + (10 * 0,10)
+            Sinon p = (q - 30) * 0,08 + ( 10 * 0,10) + (20 * 0,09)
+            ecrire ("prix total est ",p)
+        finSi
+    finSi
+fin
+________________________________________________________________________
+exo 4.5
+    Les habitants de Zorglub paient l'impôt selon les règles suivantes :
+    les H plus de 20 ans paient l'impot; les F de 18 à 35 ans paient 
+    l'impot; les autres ne paient pas d'impot
+algo_impots
+variable sexe, age 
+
+debut
+    lire (sexe, age)
+    Si (s := h et a => 20) ou (s := f et (age => 18 et age <= 35))
+    alors ecrire ("imposable");
+    sinon ecrire ("non imposable"); 
+    finSi 
+fin
+
+________________________________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+
+Exo 5.1 
+    Ecrire un algorithme qui demande à l'utilisateur un nb compris
+    entre 1 et 3 jusqu'a ce que la réponse convienne.
+algo_nombre
+variable n : entier
+
+debut 
+    ecrire ("saisir nb")
+    lire (n);
+    tant que n => 1 et n <= 3 faire
+    lire (n);
+    finTantQue
+    ecrire ("bravo");
+fin 
+________________________________________________________________________
+Exo 5.2 
+    Ecrire un algorithme qui demande un nb compris entre 10 et 20,
+    jusqu'a ce que la réponse convienne. 
+algo_nombre
+variable n : entier
+
+debut
+    ecrire ("saisir nb");
+    lire (n);
+    tant que n > 10 et n < 20 faire
+        Si n < 10 alors 
+            ecrire ("plus grand") 
+            sinon ecrire ("plus petit")
+        finSi 
+        lire (n);
+    finTantQue
+fin 
+ecrire ("bravo")
+________________________________________________________________________
+Exo 5.3
+    Ecrire un algorithme qui demande un nb de départ, et qui ensuite 
+    affiche les dix nb suivant.
+algo_nombre
+variable n ,i : entier
+
+debut 
+    lire (n);
+    pour (i :=1 ; i <= 10 ; i ++) faire
+    ecrire (n++)
+    finPour
+fin 
+________________________________________________________________________
+Exo 5.4 
+    Ecrire un algorithme qui demande un nb de départ, et qui ensuite 
+    ecrit la table de mutliplication de ce nombre.
+algo_multiplication 
+variable n, i, r : entier
+
+debut 
+    lire (n) 
+    Pour (i := 1 ; i <= 10 ; i ++) faire 
+    r = i * n
+    ecrire (, n "*" , i "=" , r);
+    finPour
+fin 
+________________________________________________________________________
+Exo 5.5 
+    Ecrire un algorithme qui demande un nb de départ, et qui calcule la
+    somme des entier jusqu'a ce nb. 5  : 1+2+3+4+5= 15
+algo_addition
+variable n, i, r : entier
+
+debut 
+    lire (n);
+    Pour (i := 1; i <= n ; i++) faire
+    r = r + i; 
+    finPour
+    ecrire (r);
+fin 
+________________________________________________________________________
+Exo 5.6
+    Ecrire un algorithme qui demande un nb de départ et qui calcule
+    sa factorielle. 5  : 1*2*3*4*5
+algo_factorielle
+variable n, i, F 
+
+debut 
+    lire (n); F := 1
+    Pour (i := 1 ; i <= n ; i++) faire
+    F = F * i 
+    finPour 
+    ecrire (F) 
+fin 
+________________________________________________________________________
+Exo 5.7 
+    Ecrire un algorithme qui demande successivement 20 nb à l'utilisateur,
+    et qui lui dise ensuite quel était le plus grand parmi ces 20 nb et 
+    la position.
+algo_nombre
+variable n, i, v, p
+
+debut 
+i := 1
+repeter
+    Pour (i := 1; i <= 20; i++) faire
+    ecrire ("entrer un chiffre")
+    lire (n);
+        Si (i := 1) alors v := n; 
+        sinon si (n > v) alors v := n;
+            finSi
+            p := i 
+        finSi 
+    finPour
+jusqu'a (n = 0);
+ecrire ("le plus grand nombre est ", n)
+ecrire ("la position est", p)
+fin
+________________________________________________________________________
+Exo 5.8 
+    Ecrire un algorithme qui demande successivement 20 nb à l'utilisateur,
+    et qui lui dise ensuite quel était le plus grand parmi ces 20 nb et 
+    la position. La saisie s'arrete lorsque l'utilisateur entre un 0.
+algo_nombre
+variable n, i, v, p
+
+debut 
+repeter
+    tant que n != 0 alors
+        ecrire ("entrez n");
+        lire (n) 
+        i++;
+            Si (i := 1 ou n > v) alors;
+            p = i 
+            jusqu'a v = n 
+            finSi 
+    finTantQue
+    ecrire ("le plus grand est", v)
+    ecrire ("la position est", p)
+fin 
+________________________________________________________________________
+Exo 5.9 
+    Lire la suite des prix en euros et terminée par 0 des achats d'un client.
+    Calculer la somme qu'il doit, lire la somme qu'il paye et simuler la 
+    remise de monnaie en affichant 10E, 5E, 1E a rendre.
+Algo_argent 
+variable T, r, p, pu, i3 (b10), i2 (b5) 
+r := 0
+
+debut 
+    repeter 
+        ecrire ("entrer", p);
+        lire (p);
+        r = r + p 
+        ecrire ("votre monnaie est de", r);
+    jusqu'a (p = 0) 
+    lire (x) 
+    r = x - T;
+    i3 = r / 10 ; 
+    i2 = (r % 10) / 5;
+    pu = (r % 5 )
+ecrire ("rendu monnaie", r);
+ecrire ("billet 10", i3);
+ecrire ("billet 5", i2);
+ecrire ("piece de 1", pu);
+fin 
+________________________________________________________________________
+Exo 5.10
+    Ecrire un algorithme qui permette de connaite ses change de gagner au
+    au tiercé, quarté, quinté, et autres impots volontaires. 
+    X = n! /(n-p)!
+    Y = n! (p!*(n-p))
+algo_chance
+variable n, p, i, f1, f2, f3
+
+debut 
+ecrire ("saisir n");
+ecrire ("saisir p)";
+lire (n, p);
+    pour (i := 1; i<= n; i++) faire
+    f1 = f1 * i 
+    n! = f1
+    finPour
+        pour (i := 1; i <= n - p; i++) faire
+        f2 = f2 * i ;
+        (n-p)! = f2;
+        finPour
+            pour (i := 1; i <= p; i++) faire
+            f3 = f3 * i 
+            p! = f3 
+            finPour 
+            X = f1 / f2
+            Y = f1 / (f2 * f3)
+    ecrire (, X "chance dans l'odre");
+    ecrire (, Y "chance dans le desordre");
+fin 
+_____________________________________________________
+________________________________________________________________________
+________________________________________________________________________
+Exo 6.1
+    Ecrire un algorithme qui déclare et remplisse un tableau de 7 valeurs 
+    numeriques en les mettant toutes a 0.
+algo_tab
+variable tab(1:7) : tableau d'entiers
+    i : entier
+
+debut 
+    Pour i := 1 à 7
+        tab(i) = 0
+    finPour
+fin 
+________________________________________________________________________
+Exo 6.2
+    Ecrire un algorithme qui déclare et remplisse un tableau contenant les
+    six voyelles de l'alphabet latin.
+algo_tab 
+variable tab(1:6) : tableau d'entiers
+     i : entier
+
+debut 
+        note(1) := a;
+        note(2) := e;
+        note(3) := i;
+        note(4) := o;
+        note(5) := u;
+        note(6) := y;
+fin 
+________________________________________________________________________
+Exo 6.3
+    Ecrire une algorithme qui déclare un tableau de 9 notes, dont on 
+    fait ensuite saisir les valeurs par l'utilisateur.
+algo_tab 
+variable tab(1:9) : tableau d'entiers
+    i : entier
+
+debut 
+    pour i := 1 à 9 faire
+        ecrire ("saisir note");
+        lire tab(i);
+        ecrire tab(i);
+    finPour
+fin 
+________________________________________________________________________
+Exo 6.4
+    Que produit l'algorithme suivant? Et simplifier.
+    tableau nb(5) en Entier
+    variable i en Entier
+    debut
+    pour i := 0 à 5
+        nb(i) := i*i 
+        i suivant
+        Pour i := 0 à 5
+        ecrire nb(i) 
+        i suivant 
+        fin 
+
+0   1   2   3   4   5
+0   1   4   9   16  25
+
+algo_tab 
+variable tab(0:5) : tableau d'entiers
+    i, nb(i): entier
+
+debut 
+    Pour i := 0 à 5 faire
+        nb(i) := i*i
+        ecrire nb(i);
+    finPour
+fin 
+________________________________________________________________________
+Exo 6.5 
+    Que produit l'algorithme suivant? Et simplifier.
+    tableau n(6) en Entier
+    variable i, k, en entier
+    debut 
+    n(0) := 1 
+    Pour k := 1 à 6
+        n(k) := n(k-1)+2 
+        k suivant
+        Pour i := 0 à 6
+            ecrire n(i)
+            i suivant
+            fin 
+
+    0   1   2   3   4   5   6
+    1   3   5   7   9   11  13
+N1  n0+2 = 1+2 
+n2  n1+2 = 3+2
+algo tableau
+
+variables tableau(0:6): tableau d'entier; i,k : entier;
+début
+n(0):=1;
+écrire (n(0));
+    pour (k=1; k<=6; k++) faire
+        n(K) := n(k-1) + 2;
+        écrire n(k);
+    fin pour
+fin
+________________________________________________________________________
+exo 6.6
+    Que produit l'algorithme suivant ?
+    tableau suite(7) en Entier
+    variable i en entier
+    debut
+    suite(0) := 1 
+    suite(1) := 1
+    pour := 2 à 7 
+        suite(i) := suite(i-1) + suite(i-2)
+        i suivant
+        Pour i := 0 à7 
+            ecrire suite(i)
+            i suivant 
+    fin 
+
+    0   1   2   3   4   5   6   7
+    1   1   2   3   5   8   13  21
+suite(i) = suite(i-1) + suite (i-2)
+    2=1+1 
+    3=2+2
+    4=3+3
+    5=4+4
+    6=5+5
+    
+variables tableau(1:7): tableau d'entier; i: entier;
+début
+    suite(0):=1;
+    suite(1):=1;
+    
+    pour (i=2; i<=7; i++) faire
+        suite(i) := suite(i-1) + suite(i-2);
+    fin pour
+    
+    pour (i=0; i<=7; i++) faire
+        écrire suite(i);
+    fin pour
+fin
+________________________________________________________________________
+exo 6.7 
+    Ecrivez la fin de l'algorithme 6.3 afin que le calcul de la moyenne 
+    des notes soit effectué et afficher a l'ecran
+algo tableau
+var tableau (1:9) : tableau d'entiers
+    i: entier
+debut 
+somme:= 0
+    Pour (i:=1; i<9; i++) faire
+        ecrire ("Entrez un nb")
+        lire (nb));
+        tab(i):= nb; 
+        somme:= somme + nb 
+    finPour 
+    moyenne:= somme/9 
+    ecrire ("la moyenne est:",moyenne);
+fin 
+________________________________________________________________________
+exo 6.8 
+    Ecrivez un algorithme permettant a l'utilisateur de saisir un nb 
+    quelconque de valeurs, qui devront etre stockées dans un tableau. 
+    l'utilisateur doit donc commencer par entrer le nb de valeur, .. le 
+    programme affichera le nb de valeurs negative et positive.
+algo tab
+var tableau (1:N) : tableau d'entier;
+     : entier
+    
+debut
+lire (n); 
+pos:=0, neg:=0
+Pour (i=1; i<=N; i++) faire              OU Pour i: 1 à N
+    ecrire ("Entrez un nombre")
+    lire (tab(i));
+    Si (tableau(i))>0 alors 
+        pos++;
+        sinon si (tableau(i))<0 alors
+        neg++; 
+        FinSi
+    FinSi
+FinPour
+Fin
+________________________________________________________________________
+exo 6.9
+    Ecrivez un algorithme calculant la somme des valeurs d'un tableau.
+algo tab
+var tableau (1:N) : tableau d'entiers
+    i, somme, N: entier
+debut 
+somme:= 0; 
+Pour (i:=0; i<=N; i++) faire 
+    somme:= somme + tab(i)  
+FinPour
+ecrire ("la somme est :",somme)   
+Fin 
+________________________________________________________________________
+exo 6.10
+    Ecrivez un algorithme constituant un tableau, à partir de deux tableau
+    de meme longueur préalablement saisis. Le nouveau tableau sera la somme 
+    des elements des deux tableaux de depart.
+algo tab
+var A(1:8), B(1:8), somme(1:8) : tableau d'entiers
+    i : entier
+debut 
+somme :=0 
+Pour (i:=0; i<=8; i++) faire 
+    tabsomme(i):= tabA(i)+ tabB(i)
+    ecrire tab somme(i); 
+    FinPour
+Fin 
+________________________________________________________________________   
+exo 6.11
+    Ecrivez un algorithme qui calcul le schtroumpf des deux tableaux. Il 
+    faut multiplier chaque élément du tableau 1 par chaque élément du 
+    tableau 2 et additionner le tout.
+algo tab
+var A(1:N), B(1:M),
+    i,j, somme : entier
+debut 
+somme:=0 
+Pour (i:=1; i<=N; i++) faire
+    Pour (j:=1; j<=M; j++) faire
+        somme:= somme + tabA(i)* tabB(j)
+    FinPour
+FinPour 
+ecrire ("la somme est ",somme)
+Fin
+________________________________________________________________________
+exo 6.12
+    Ecrivez un algorithme qui permette la saisie d'un nb quelconque de 
+    valeurs. Toutes les valeurs doivent etre ensuite augmentées de 1 et
+    le nouveau tableau sera affiché a l'ecran.
+algo tab
+var tableau (1:N) : tableau d'entier;
+     i : entier
+debut
+lire (n); 
+pos:=0, neg:=0
+Pour (i=1; i<=N; i++) faire              OU Pour i: 1 à N
+    ecrire ("Entrez un nombre N")
+    lire (n);
+    (tab(i)):= N+1 ; 
+    lire (tab(i))   
+FinPour
+Fin
+________________________________________________________________________ 
+exo 6.13   
+   Ecrivez un algorithme qui permette la saisie d'un nb quelconque de 
+    valeurs. Renvoie la plus grande valeur et la position.    
+algo tab
+var tableau (1:N) : tableau d'entier;
+    N, max : entier
+debut
+lire (n); 
+pos:=0, neg:=0
+Pour (i:=1; i<=N; i++) faire             OU Pour i: 1 à N
+    ecrire ("Entrez un nombre")
+    lire (tab(i));  
+FinPour
+Pour (i:=1; i<=N; i++) faire
+    Si (i=1) ou N>max alors 
+    debut
+    max:= N;
+    ecrire (,N"est la plus grande valeur")
+    lire (tab(i)) 
+    fin 
+    FinSi
+FinPour
+Fin 
+________________________________________________________________________ 
+exo 6.14  
+    Ecrivez un algorithme permettant, à l'utilisateur de saisir les notes 
+    d'une classe. Renvoie le nb de ces notes supérieur à la moyenne de la 
+    classe.
+algo tab
+var tableau (1:N) : tableau d'entier;
+     comme , i, : entier
+     
+debut
+lire (n); 
+Pour (i=1; i<=N; i++) faire              OU Pour i: 1 à N
+    lire (tab(i));  
+    somme:= somme + tab(i); 
+FinPour
+    moyenne:= somme/ i;
+    ecrire ("la moyenne de la classe est:",moyenne);  
+FinPour
+Pour (j=1; j<=N; j++) faire  
+    Si tab(i)>moyenne alors (cpt++)
+    ecrire (,N"est superieur à la moyenne")
+    FinSi       
+FinPour
+ecrire (cpt);
+Fin     
+________________________________________________________________________ 
+________________________________________________________________________ 
+________________________________________________________________________ 
+exo 7.1 
+    Ecrivez un algorithme qui permette de saisir un nombre quelconque de 
+    valeurs, et qui les range au fur et a mesure dans un tableau. 
+    Consécutifs ou non.
+algo tab 
+var tab(1:N) : tab d'entiers
+    i,n : entier
+debut
+done:= Faux 
+i:=2
+Repeter
+        Si tab(i) != tabA(i-1)+1  alors done:= vrai
+        i++; 
+        FinSi
+        jusqu'a (done:= vrai ou i:=n)
+        Si done alors 
+            ecrire ("consécutifs")
+            sinon ecrire ("non consecutifs")
+        FinSi
+    FinPour
+Fin 
+________________________________________________________________________ 
+exo 7.2 
+    Ecrivez un algorithme qui trie un tableau dans l'ordre décroissant.
+    
+Tri par selection/ insertion :
+    algo tab
+    var tab(1:N) : tab d'entiers
+        i,min,pos,temp, N : entier 
+    
+    Pour i:= 1 à N- 1 faire
+        min:= tab(i); pos:= i
+        pour j:=i+1 à N-1 faire
+            Si (tab(j)) < min) alors
+            min:= tab (j); pos:= j;
+            FinSi
+        FinPour
+            temp := tab(i)
+            tab (i) :=  tab(pos)
+            tab(pos) := temp
+            FinSi
+    FinPour
+    Fin
+
+Tri à bulles :
+1. tab(i) < tab(i+1) 
+2. Flag
+algo 
+var tab (1:n) entiers;
+        n,i : entier
+        YaPermute : booleen;
+YaPermute := Vrai
+debut
+    Tantque (yapermute) faire
+    yapermute:= Faux
+    Pour i:=1 a n-1                 /*On parcour le tableau*/
+        si (tab(i)< tab(i+1))       /*En comparant la valeur actuelle avec la suivante*/
+            temp:= tab(i);          /*Si elle est plus petite, alors on permute*/
+            tab(i):= tab(i+1);
+            tab(i+1):= temp;
+            yapermute:= vrai        /*Il y a eu permutation*/
+        FinSi
+    FinPour
+Fin
+    
+    
+________________________________________________________________________ 
+exo 7.3 
+    Ecrivez un algorithme qui inverse l'ordre des éléments d'un tableau
+    dont on suppose qu'il a été préalablement saisi.
+algo inverser;
+var tab(1:N) : entiers                          1   2   3   4   
+    i,n temp : entier                           12  15  9   10      
+                                                    
+debut                                           12  15  10
+i:=0; 
+Repeter
+    temp := (tab(i+1))    
+    tab(i+1):= Tab(n-i)  ; 
+    tab(n-i):= temp;
+    i++;
+jusqu'à ((i+1) >= (n-i))
+Fin
+
+OU 
+debut                           debut
+pour(i=1; i<n; i++)              Pour (i=1; i=<n/2; i++)
+ temp:= tab(i);                     temp:= tab(i);
+ tab(i):= tab(n);                   tab(i):= table(n-i);
+ tab(n):= temp;                     tab(n-i):= temp;
+Finpour                         FinPour
+Fin                             Fin 
+________________________________________________________________________ 
+exo 7.4 
+    Ecrivez un algorithme qui permette à l'utilisateur de supprimer une 
+    valeur d'un tableau préalablement saisi. 
+algo sup 
+var tab(0:N) : entiers
+    i : entier
+    
+debut
+ecrire ("quel valeur supprimer?")  
+lire (X) 
+Pour i:= X à N-1
+    tab(i):= tab(i+1)
+redim(tab(n-1))
+FinPour
+fin
+
+OU
+
+debut
+pour (i:=x, i<=n-1; i++) faire   
+    tab(i):= tab(i+1)
+FinPour
+redim (tab(n-1));
+Fin 
+________________________________________________________________________ 
+exo 7.5
+    Ecrivez un algorithme qui cherche un mot au clavier dans un dico.
+algo dico
+var tab(1:n) : chaine de caractère
+    sup, inf, comp : chaine de caractère
+    
+
+lire (mot);                                 Pour (i:= 1 à 9) faire 
+i:=1; trouve := faux;                           Si (mot= (dict(1))
+repeter                                             alors ecrire ("trouver");
+Si(mot = Dict(9/2))                             i:=9
+    alors trouve := Vrai                    FinPour
+Sinon Si mot < Dict (4/2)
+jusqu'a trouve;
+algo dictionnaire
+var dicto(1:n) : tableau de chaines de caracteres,
+    trouve : booléen,
+    mot : chaine de caractère
+    indiceDepart, indiceFinal, indiceMilieux:= (indiceDepart + indiceFinal)/2 : entier;
+     
+    
+debut 
+    trouve := faux                                                      1   2   3   4   5   6
+    lire(mot);                                                          b   c   f   h   o   y
+    indiceDepart:= 1; indiceFinal:= n; indiceMilieux;
+    repeter
+        indiceMilieux:= (indiceDepart + indiceFinal)/2
+        si (mot > dicto(indiceMilieux))
+            alors                                   
+            indiceDepart := indiceMilieux +1                // maj l'indice de depart (indiceDepart = n/2 +1)   6/2+1=4
+                                                            // indice final max = n                             6
+            Sinon si (mot < dicto(n/2))
+                alors                               
+                                                            // maj indice de depart (indiceDepart =1)           [1:4]
+                indiceFinal := indiceMilieux -1;            // indice final ( =n/2-1)                           6/2-1 2
+                sinon 
+                    trouve :=vrai 
+                fin_si
+        fin_si
+        
+    jusqu'a (trouve := vrai ou indiceDepart >n ou indiceFinal <= 0)
+    si (trouve) alors ecrire ("mot trouvé");
+    sinon ecrire ("mot non trouvé");
+fin
+________________________________________________________________________ 

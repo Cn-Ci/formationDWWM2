@@ -41,7 +41,7 @@ if (isset($_POST['ajouter'])
                 )";
 
             $db = mysqli_init();
-            mysqli_real_connect($db, 'localhost','root','','afpa_test');
+            mysqli_real_connect($db, 'localhost','root','root','afpa_test');
             
             if (mysqli_query($db, $sql)) {
                 header('location: ./bdd1.php?action=ajoutOk');
@@ -66,7 +66,7 @@ if (isset($_POST['modifier'])){
                 $noproj = $_POST["noproj"]? "'".$_POST['noproj']. "'" : 'NULL';;
 
             $db = mysqli_init();
-            mysqli_real_connect($db, 'localhost','root','','afpa_test');
+            mysqli_real_connect($db, 'localhost','root','root','afpa_test');
 
             $sql = "update employe set nom= $nom, prenom=$prenom , emploi=$emploi, sal=$sal , comm=$comm, sup=$sup where no_emp = $no_emp";
     
@@ -84,7 +84,7 @@ if (isset($_POST['supprimer'])){
                 $no_emp = $_POST['no_emp'];
 
             $db = mysqli_init();
-            mysqli_real_connect($db, 'localhost','root','','afpa_test');    
+            mysqli_real_connect($db, 'localhost','root','root','afpa_test');    
 
             $requete = "delete from employe where no_emp= $no_emp";
 
@@ -121,7 +121,7 @@ if (isset($_GET['page'])){
             $no_emp = $_GET['no_emp'];
 
             $db = mysqli_init();
-            mysqli_real_connect($db, 'localhost','root','','afpa_test');
+            mysqli_real_connect($db, 'localhost','root','root','afpa_test');
 
             //afficher données
             $sql = "SELECT * FROM employe WHERE no_emp = $no_emp";
@@ -188,7 +188,7 @@ if (isset($_GET['page'])){
         <?php
 
             $db = mysqli_init();
-            mysqli_real_connect($db, 'localhost','root','','afpa_test');
+            mysqli_real_connect($db, 'localhost','root','root','afpa_test');
             //afficher données
             $sql = "SELECT * FROM employe";
             $rs = mysqli_query($db, $sql);

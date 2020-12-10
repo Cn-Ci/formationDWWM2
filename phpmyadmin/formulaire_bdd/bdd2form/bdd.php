@@ -55,7 +55,7 @@ if (isset($_GET["action"])  && $_GET["action"]=="add" && !empty($_POST)){
             $noproj = $_POST["modifnoproj"];
 
             $db = mysqli_init();
-            mysqli_real_connect($db, 'localhost','root','','afpa_test');
+            mysqli_real_connect($db, 'localhost','root','root','afpa_test');
 
             $sql = " update employe set nom= $nom, prenom=$prenom , emploi=$emploi, sal=$sal , comm=$comm, sup=$sup where no_emp=$no_empdef";
             
@@ -75,7 +75,7 @@ if (isset($_GET["action"])  && $_GET["action"]=="add" && !empty($_POST)){
             $no_emp = $_GET['no_emp'];
 
             $db = mysqli_init();
-            mysqli_real_connect($db,'localhost','root','','afpa_test');
+            mysqli_real_connect($db,'localhost','root','root','afpa_test');
 
             $rs = "delete from employe where no_emp=$no_emp";
             $data=mysqli_query($db, $rs);
@@ -119,7 +119,7 @@ if (isset($_GET["action"])  && $_GET["action"]=="add" && !empty($_POST)){
                                 <?php
                                 /* connection a la bdd */
                                 $db = mysqli_init();
-                                mysqli_real_connect($db, 'localhost','root','','afpa_test');
+                                mysqli_real_connect($db, 'localhost','root','root','afpa_test');
                                 $rs = mysqli_query($db, 'SELECT * FROM employe');
                                 $data = mysqli_fetch_all($rs, MYSQLI_ASSOC);
 
